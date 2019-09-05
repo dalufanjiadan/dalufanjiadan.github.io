@@ -14,8 +14,9 @@
 
 ### 更新主题
 
-- `git clone --branch v6.0.0 https://github.com/theme-next/hexo-theme-next themes/name`
-- 更改`_config.yml` theme
+- `git clone https://github.com/GallenHu/hexo-theme-Daily.git themes/Daily`
+- `npm install --save hexo-renderer-sass`
+- `theme: Daily`
 
 ### 新建
 
