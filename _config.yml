@@ -75,7 +75,10 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 # theme: landscape
 # theme: daily
-theme: lemon-lime
+# theme: lemon-lime
+# theme: Nayo
+theme: pacman
+
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
