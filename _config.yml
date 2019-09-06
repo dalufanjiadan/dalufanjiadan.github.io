@@ -77,7 +77,8 @@ pagination_dir: page
 # theme: daily
 # theme: lemon-lime
 # theme: Nayo
-theme: pacman
+# theme: pacman
+theme: icarus
 
 
 # Deployment
