@@ -78,7 +78,7 @@ pagination_dir: page
 # theme: lemon-lime
 # theme: Nayo
 # theme: pacman
-theme: icarus
+theme: icarus-gc
 
 
 # Deployment
