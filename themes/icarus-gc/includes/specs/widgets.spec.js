@@ -87,7 +87,8 @@ const ProfileSpec = {
     avatar: {
         [type]: 'string',
         [doc]: 'Path or URL to the avatar to be shown in the profile widget',
-        [defaultValue]: '/images/avatar.png'
+        // [defaultValue]: '/images/avatar.png'
+        [defaultValue]: '/images/dog.jpg'
     },
     avatar_rounded: {
         [type]: 'boolean',
