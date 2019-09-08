@@ -60,7 +60,9 @@
 }
 
 .searchbox .searchbox-input-wrapper .searchbox-close:hover {
-    color: #3273dc;
+    /* color: #3273dc; */
+    color: #94aa30;
+    
 }
 
 .searchbox .searchbox-result-wrapper {
@@ -91,4 +93,9 @@
         height: 100%;
         background: #f7f7f7;
     }
+}
+
+a{
+
+    color:#94aa30
 }

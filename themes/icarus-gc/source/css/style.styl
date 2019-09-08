@@ -73,6 +73,14 @@ body, button, input, select, textarea
         border-top-left-radius: 4px
         border-top-right-radius: 4px
 
+    .button
+        background: #e7e7e7
+        color: #363636
+        &:hover
+            color: #94aa30 
+            background: #e7e7e7
+
+
 img.thumbnail
     object-fit: cover
     width: 100%
@@ -106,8 +114,11 @@ img.thumbnail
         display: flex
         align-items: center
         padding: 1.25rem 0.75rem
+        &:hover
+            color: #94aa30 
         &.is-active
-            color: hsl(217, 71%, 53%)
+            // color: hsl(217, 71%, 53%)
+            color: #94aa30
             background-color: transparent
     @media screen and (max-width: screen-desktop - 1)
         .navbar-menu
@@ -117,12 +128,15 @@ img.thumbnail
             margin-right: 0
         .navbar-end
             margin-left: 0
+    
+
 
 .footer
     background: white
     .field
         .button
             background: transparent
+
 
 .widget
     .media
@@ -135,6 +149,8 @@ img.thumbnail
         display: flex
     .has-text-centered figure.image
         margin: auto
+
+
 
 .pagination
     .pagination-link:not(.is-current), .pagination-previous, .pagination-next
@@ -306,7 +322,8 @@ img.thumbnail
 .has-link-black-ter
     transition: 0.2s ease
     &:hover
-        color: hsl(217, 71%, 53%) !important
+        // color: hsl(217, 71%, 53%) !important
+        color: #94aa30 !important
 
 .has-link-grey
     color: hsl(0, 0%, 48%) !important
@@ -470,4 +487,7 @@ figure.highlight
             border: none
     .file
         all: initial
+
+a
+    color:#94aa30
 
