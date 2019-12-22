@@ -1,5 +1,8 @@
 # hexo
 
+### 安装hexo
+- `npm install hexo-cli -g`
+
 ### 1. 常用命令
 
 - `hexo generate [-d]`
