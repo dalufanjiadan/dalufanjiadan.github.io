@@ -27,7 +27,7 @@ module.exports = function (hexo) {
         if (this.page.layout === 'post') {
             return widgets.filter(widget => widget.hasOwnProperty('position') && (widget.type === 'toc' ) && widget.position === position);
         } else {
-            return widgets.filter(widget => widget.hasOwnProperty('position') && (widget.type === 'todo' ) && widget.position === position);
+            return widgets.filter(widget => widget.hasOwnProperty('position') && (widget.type === 'photo' ) && widget.position === position);
         }
         
         // return widgets.filter(widget => widget.hasOwnProperty('position') && widget.position === position);
