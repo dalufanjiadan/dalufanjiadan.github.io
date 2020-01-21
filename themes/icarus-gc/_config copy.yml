@@ -120,25 +120,25 @@ sidebar:
 # Sidebar widget settings
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
 widgets:
-    -
-        # Widget name
-        type: profile
-        # Where should the widget be placed, left or right
-        position: left
-        # Author name to be shown in the profile widget
-        author: 三好学生
-        # Title of the author to be shown in the profile widget
-        author_title: 
-        # Author's current location to be shown in the profile widget
-        location: Shanghai China
-        # Path or URL to the avatar to be shown in the profile widget
-        avatar: 
-        # Email address for the Gravatar to be shown in the profile widget
-        gravatar: 
-        # Whether to show avatar image rounded or square
-        avatar_rounded: false
-        # Path or URL for the follow button
-        follow_link: 'https://github.com/ppoffice'
+    # -
+    #     # Widget name
+    #     type: profile
+    #     # Where should the widget be placed, left or right
+    #     position: left
+    #     # Author name to be shown in the profile widget
+    #     author: 三好学生
+    #     # Title of the author to be shown in the profile widget
+    #     author_title: 
+    #     # Author's current location to be shown in the profile widget
+    #     location: Shanghai China
+    #     # Path or URL to the avatar to be shown in the profile widget
+    #     avatar: 
+    #     # Email address for the Gravatar to be shown in the profile widget
+    #     gravatar: 
+    #     # Whether to show avatar image rounded or square
+    #     avatar_rounded: false
+    #     # Path or URL for the follow button
+    #     follow_link: 'https://github.com/ppoffice'
         # Links to be shown on the bottom of the profile widget
         # social_links:
         #     Github:
@@ -156,11 +156,11 @@ widgets:
         #     RSS:
         #         icon: fas fa-rss
         #         url: /
-    -
-        # Widget name
-        type: category
-        # Where should the widget be placed, left or right
-        position: left
+    # -
+    #     # Widget name
+    #     type: category
+    #     # Where should the widget be placed, left or right
+    #     position: left
     # -
     #     # Widget name
     #     type: tagcloud
@@ -169,14 +169,21 @@ widgets:
     
     -
         # Widget name
-        type: tag
+        type: toc
         # Where should the widget be placed, left or right
         position: left
     -
         # Widget name
-        type: toc
+        type: tag
         # Where should the widget be placed, left or right
         position: left
+
+    -
+        # Widget name
+        type: photo
+        # Where should the widget be placed, left or right
+        position: left
+    
     # -
     #     # Widget name
     #     type: links
