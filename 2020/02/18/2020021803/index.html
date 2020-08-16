@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>aspect - Hexo</title>
+
+
+    <meta name="description" content="add an aspect in Spring Boot">
+<meta name="keywords" content="springboot,aspect">
+<meta property="og:type" content="article">
+<meta property="og:title" content="aspect">
+<meta property="og:url" content="http://yoursite.com/2020/02/18/2020021803/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="add an aspect in Spring Boot">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-05-20T09:15:54.116Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="aspect">
+<meta name="twitter:description" content="add an aspect in Spring Boot">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="aspect" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    aspect
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-02-18T01:53:19.000Z">2020-02-18</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-02-18T01:53:19.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-02-18</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-20T09:15:54.116Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-20</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/springboot/">springboot</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 516 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                aspect
+            
+        </h1> -->
+        <div class="content">
+            <p>add an aspect in Spring Boot</p>
+<a id="more"></a>
+
+<h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-aop<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Enable-disable-auto-configuration"><a href="#Enable-disable-auto-configuration" class="headerlink" title="Enable/disable auto configuration"></a>Enable/disable auto configuration</h3><ul>
+<li>property.properties</li>
+</ul>
+<figure class="highlight properties hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">spring.aop.auto</span> = <span class="hljs-string">true    //'false' disables the auto configuration</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Creating-aspects-with-Aspect"><a href="#Creating-aspects-with-Aspect" class="headerlink" title="Creating aspects with @Aspect"></a>Creating aspects with @Aspect</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.uuzu.newbasys.aspect;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> com.uuzu.newbasys.annotation.LogAPIAccessAnnotation;</span><br><span class="line"><span class="hljs-keyword">import</span> com.uuzu.newbasys.mapper.ba.log.LogAPIAccessMapper;</span><br><span class="line"><span class="hljs-keyword">import</span> com.uuzu.newbasys.model.log.LogAPIAccessModel;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.aspectj.lang.ProceedingJoinPoint;</span><br><span class="line"><span class="hljs-keyword">import</span> org.aspectj.lang.annotation.AfterReturning;</span><br><span class="line"><span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Around;</span><br><span class="line"><span class="hljs-keyword">import</span> org.aspectj.lang.annotation.Aspect;</span><br><span class="line"><span class="hljs-keyword">import</span> org.aspectj.lang.reflect.MethodSignature;</span><br><span class="line"><span class="hljs-keyword">import</span> org.json.JSONObject;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.core.context.SecurityContextHolder;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.security.core.userdetails.UserDetails;</span><br><span class="line"><span class="hljs-keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="hljs-keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Aspect</span></span><br><span class="line"><span class="hljs-meta">@Component</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LogAPIAccessAspect</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger logger = LoggerFactory.getLogger(LogAPIAccessAspect.class);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    <span class="hljs-keyword">private</span> LogAPIAccessMapper mapper;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Autowired</span></span><br><span class="line">    <span class="hljs-keyword">private</span> HttpServletRequest request;</span><br><span class="line"></span><br><span class="line">    ThreadLocal&lt;LogAPIAccessModel&gt; logModelTh = <span class="hljs-keyword">new</span> ThreadLocal&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Around</span>(<span class="hljs-string">"@annotation(com.uuzu.newbasys.annotation.LogAPIAccessAnnotation)"</span>)</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">logAPIAccess</span><span class="hljs-params">(ProceedingJoinPoint joinPoint)</span> <span class="hljs-keyword">throws</span> Throwable </span>&#123;</span><br><span class="line"></span><br><span class="line">        LogAPIAccessModel logModel = <span class="hljs-keyword">new</span> LogAPIAccessModel();</span><br><span class="line">        logModelTh.set(logModel);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// username</span></span><br><span class="line">        String userName = <span class="hljs-string">"anonymous"</span>;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">if</span> (SecurityContextHolder.getContext().getAuthentication() != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">            UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication()</span><br><span class="line">                    .getPrincipal();</span><br><span class="line">            userName = userDetails.getUsername();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 记录下请求内容</span></span><br><span class="line">        String url = request.getRequestURL().toString();</span><br><span class="line">        String httpMethod = request.getMethod();</span><br><span class="line">        String ip = request.getRemoteAddr();</span><br><span class="line"></span><br><span class="line">        MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();</span><br><span class="line">        Method method = methodSignature.getMethod();</span><br><span class="line">        <span class="hljs-comment">// 类名</span></span><br><span class="line">        String className = methodSignature.getDeclaringTypeName();</span><br><span class="line">        <span class="hljs-comment">// 方法名</span></span><br><span class="line">        String methodName = methodSignature.getName();</span><br><span class="line">        <span class="hljs-comment">// 路径参数</span></span><br><span class="line">        JSONObject params = <span class="hljs-keyword">new</span> JSONObject(request.getParameterMap());</span><br><span class="line">        <span class="hljs-comment">// requestBody</span></span><br><span class="line">        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();</span><br><span class="line">        BufferedReader reader = request.getReader();</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            String line;</span><br><span class="line">            <span class="hljs-keyword">while</span> ((line = reader.readLine()) != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">                sb.append(line).append(<span class="hljs-string">'\n'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">finally</span> &#123;</span><br><span class="line">            reader.close();</span><br><span class="line">        &#125;</span><br><span class="line">        String requestBody = <span class="hljs-keyword">null</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span> (sb.toString().length() &gt; <span class="hljs-number">0</span>) &#123;</span><br><span class="line">            requestBody = sb.toString();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">        Object proceed = joinPoint.proceed();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 执行时间</span></span><br><span class="line">        <span class="hljs-keyword">long</span> executionTime = System.currentTimeMillis() - start;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 注解上的描述信息</span></span><br><span class="line">        LogAPIAccessAnnotation logAnnotation = method.getAnnotation(LogAPIAccessAnnotation.class);</span><br><span class="line">        String logAnnotationValue = <span class="hljs-string">"-"</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span> (logAnnotation != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">            logAnnotationValue = logAnnotation.value();</span><br><span class="line">        &#125;</span><br><span class="line">        String[] logAnnotationValueArray = logAnnotationValue.split(<span class="hljs-string">"-"</span>);</span><br><span class="line"></span><br><span class="line">        logModel.setUserName(userName);</span><br><span class="line">        logModel.setProject(logAnnotationValueArray[<span class="hljs-number">0</span>]);</span><br><span class="line">        logModel.setPage(logAnnotationValueArray[<span class="hljs-number">1</span>]);</span><br><span class="line">        logModel.setDetail(logAnnotationValueArray[<span class="hljs-number">2</span>]);</span><br><span class="line">        logModel.setHttpMethod(httpMethod);</span><br><span class="line">        logModel.setUrl(url);</span><br><span class="line">        logModel.setExecutionTime(executionTime);</span><br><span class="line">        logModel.setParams(params.toString());</span><br><span class="line">        logModel.setRequestBody(requestBody);</span><br><span class="line">        logModel.setClassName(className);</span><br><span class="line">        logModel.setMethodName(methodName);</span><br><span class="line">        logModel.setIp(ip);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> proceed;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@AfterReturning</span>(pointcut = <span class="hljs-string">"@annotation(com.uuzu.newbasys.annotation.LogAPIAccessAnnotation)"</span>, returning = <span class="hljs-string">"response"</span>)</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doAfterReturning</span><span class="hljs-params">(Object response)</span> <span class="hljs-keyword">throws</span> Throwable </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 处理完请求，返回内容</span></span><br><span class="line">        LogAPIAccessModel logModel = logModelTh.get();</span><br><span class="line">        logModel.setResponse(response.toString());</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            mapper.save(logModel);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            logger.error(<span class="hljs-string">"接口统计报错！"</span>);</span><br><span class="line">            logger.error(e.getMessage());</span><br><span class="line">        &#125; <span class="hljs-keyword">finally</span> &#123;</span><br><span class="line">            logModelTh.remove();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="create-annotation"><a href="#create-annotation" class="headerlink" title="create annotation"></a>create annotation</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.uuzu.newbasys.annotation;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Target</span>(ElementType.METHOD)</span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> LogAPIAccessAnnotation &#123;</span><br><span class="line">    <span class="hljs-comment">// value 格式为 page-detail</span></span><br><span class="line">    <span class="hljs-comment">// 实时运营商-搜索</span></span><br><span class="line">    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> ""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">"/logPostMethodTest"</span>)</span><br><span class="line"><span class="hljs-meta">@LogAPIAccessAnnotation</span>(<span class="hljs-string">"yoobi-test-log"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> Map&lt;String, Object&gt; <span class="hljs-title">logPostMethodTest</span><span class="hljs-params">(@RequestBody Map&lt;String, Object&gt; requestBody,@RequestParam(<span class="hljs-string">"name"</span>)</span> String name,</span></span><br><span class="line"><span class="hljs-function">@<span class="hljs-title">RequestParam</span><span class="hljs-params">(<span class="hljs-string">"age"</span>)</span> <span class="hljs-keyword">int</span> age) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> requestBody;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/aspect/">aspect</a>,&nbsp;<a class="has-link-grey -link" href="/tags/springboot/">springboot</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/22/2020022201/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">iterm2 colors</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/02/17/2020021802/">
+                <span class="level-item">interceptor</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Maven">
+        <span class="has-mr-6">1</span>
+        <span>Maven</span>
+        </a></li><li>
+        <a class="is-flex" href="#Enable-disable-auto-configuration">
+        <span class="has-mr-6">2</span>
+        <span>Enable/disable auto configuration</span>
+        </a></li><li>
+        <a class="is-flex" href="#Creating-aspects-with-Aspect">
+        <span class="has-mr-6">3</span>
+        <span>Creating aspects with @Aspect</span>
+        </a></li><li>
+        <a class="is-flex" href="#create-annotation">
+        <span class="has-mr-6">4</span>
+        <span>create annotation</span>
+        </a></li><li>
+        <a class="is-flex" href="#test">
+        <span class="has-mr-6">5</span>
+        <span>test</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="aspect" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

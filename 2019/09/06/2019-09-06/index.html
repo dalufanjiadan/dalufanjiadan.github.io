@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>hexo blog分类方法 - Hexo</title>
+
+
+    <meta name="description" content="Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。同 classs 和 interface 一样，注解也属于一种类型。它是在 Java SE 5.0 版本中开始引入的概念。">
+<meta name="keywords" content="hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo blog分类方法">
+<meta property="og:url" content="http://yoursite.com/2019/09/06/2019-09-06/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。同 classs 和 interface 一样，注解也属于一种类型。它是在 Java SE 5.0 版本中开始引入的概念。">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-05-20T09:15:54.109Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo blog分类方法">
+<meta name="twitter:description" content="Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。同 classs 和 interface 一样，注解也属于一种类型。它是在 Java SE 5.0 版本中开始引入的概念。">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="hexo blog分类方法" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    hexo blog分类方法
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2019-09-06T14:31:42.000Z">2019-09-06</time> -->
+                    <time class="level-item has-text-grey" datetime="2019-09-06T14:31:42.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-09-06</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-20T09:15:54.109Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-20</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/hexo/">hexo</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/hexo/写作/">写作</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1548 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                hexo blog分类方法
+            
+        </h1> -->
+        <div class="content">
+            <p>Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。<br>同 classs 和 interface 一样，注解也属于一种类型。它是在 Java SE 5.0 版本中开始引入的概念。</p>
+<a id="more"></a>
+
+<hr>
+<h4 id="注解的定义"><a href="#注解的定义" class="headerlink" title="注解的定义"></a>注解的定义</h4><p>注解通过<code>@interface</code>关键字进行定义</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> TestAnnotation &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注解的应用"><a href="#注解的应用" class="headerlink" title="注解的应用"></a>注解的应用</h4><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@TestAnnotation</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h4><p>元注解是可以注解到注解上的注解，或者说元注解是一种基本注解，但是它能够应用到其它的注解上面。有 @Retention、@Documented、@Target、@Inherited、@Repeatable 5 种。</p>
+<ul>
+<li>@Retention:说明了这个注解的的存活时间,取值有 RetentionPolicy.SOURCE，RetentionPolicy.CLASS，RetentionPolicy.RUNTIME，分别表示注解保留到源代码阶段，编译阶段，以及运行阶段。</li>
+<li>@Documented:将注解中的元素包含到 Javadoc 中去。</li>
+<li>@Target:限定运用的场景。@Target 有下面的取值<ul>
+<li>ElementType.ANNOTATION_TYPE 可以给一个注解进行注解</li>
+<li>ElementType.CONSTRUCTOR 可以给构造方法进行注解</li>
+<li>ElementType.FIELD 可以给属性进行注解</li>
+<li>ElementType.LOCAL_VARIABLE 可以给局部变量进行注解</li>
+<li>ElementType.METHOD 可以给方法进行注解</li>
+<li>ElementType.PACKAGE 可以给一个包进行注解</li>
+<li>ElementType.PARAMETER 可以给一个方法内的参数进行注解</li>
+<li>ElementType.TYPE 可以给一个类型进行注解，比如类、接口、枚举</li>
+</ul>
+</li>
+<li>@Inherited:Inherited 是继承的意思，但是它并不是说注解本身可以继承，而是说如果一个超类被 @Inherited 注解过的注解进行注解的话，那么如果它的子类没有被任何注解应用的话，那么这个子类就继承了超类的注解。</li>
+<li>@Repeatable:注解的值可以同时取多个。</li>
+</ul>
+<p>代码示例：</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// @Retention</span></span><br><span class="line"><span class="hljs-meta">@TestAnnotation</span></span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> TestAnnotation &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// @Inherited</span></span><br><span class="line"><span class="hljs-meta">@Inherited</span></span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-meta">@interface</span> Test &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Test</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">B</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">A</span> </span>&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// @Repeatable</span></span><br><span class="line"><span class="hljs-meta">@interface</span> Persons &#123;</span><br><span class="line">Person[] value();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Repeatable</span>(Persons.class)</span><br><span class="line"><span class="hljs-meta">@interface</span> Person&#123;</span><br><span class="line">String role <span class="hljs-keyword">default</span> <span class="hljs-string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Person</span>(role=<span class="hljs-string">"artist"</span>)</span><br><span class="line"><span class="hljs-meta">@Person</span>(role=<span class="hljs-string">"coder"</span>)</span><br><span class="line"><span class="hljs-meta">@Person</span>(role=<span class="hljs-string">"PM"</span>)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SuperMan</span></span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注解的属性"><a href="#注解的属性" class="headerlink" title="注解的属性"></a>注解的属性</h4><p>注解的属性也叫做成员变量。注解只有成员变量，没有方法。注解的成员变量在注解的定义中以“无形参的方法”形式来声明，其方法名定义了该成员变量的名字，其返回值定义了该成员变量的类型。注解中定义属性时它的类型必须是 8 种基本数据类型外加 类、接口、注解及它们的数组。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@TestAnnotation</span></span><br><span class="line"><span class="hljs-meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> TestAnnotation &#123;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">id</span><span class="hljs-params">()</span></span>;</span><br><span class="line"><span class="hljs-function">String <span class="hljs-title">msg</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 这个注解中拥有 id 和 msg 两个属性。在使用的时候赋值</span></span><br><span class="line"><span class="hljs-meta">@TestAnnotation</span>(id=<span class="hljs-number">3</span>,msg=<span class="hljs-string">"hello annotation"</span>)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 注解中属性可以有默认值，默认值需要用 default 关键值指定</span></span><br><span class="line"><span class="hljs-meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> TestAnnotation &#123;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">id</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> -1</span>;</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">msg</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> "Hi"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 使用</span></span><br><span class="line"><span class="hljs-meta">@TestAnnotation</span>()</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果一个注解内仅仅只有一个名字为 value 的属性时，应用这个注解时可以直接接属性值填写到括号内。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> Check &#123;</span><br><span class="line"><span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Java-预制的注解"><a href="#Java-预制的注解" class="headerlink" title="Java 预制的注解"></a>Java 预制的注解</h4><ul>
+<li>@Deprecated:告诉开发者正在调用一个过时的元素比如过时的方法、过时的类、过时的成员变量。</li>
+<li>@Override:复写父类中被 @Override 修饰的方法。</li>
+<li>@SuppressWarnings:阻止警告。</li>
+<li>@FunctionalInterface:函数式接口注解。</li>
+<li>函数式接口可以很容易转换为 Lambda 表达式。</li>
+</ul>
+<h4 id="注解的提取"><a href="#注解的提取" class="headerlink" title="注解的提取"></a>注解的提取</h4><p>注解通过反射获取。（反射 (Reflection) 是 Java 的特征之一，它允许运行中的 Java 程序获取自身的信息，并且可以操作类或对象的内部属性。）</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 首先可以通过 Class 对象的 isAnnotationPresent() 方法判断它是否应用了某个注解</span></span><br><span class="line"><span class="hljs-comment">// boolean isAnnotationPresent(Class&lt;? extends Annotation&gt; annotationClass) &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 然后通过 getAnnotation() 方法来获取 Annotation 对象</span></span><br><span class="line"><span class="hljs-comment">// public &lt;A extends Annotation&gt; A getAnnotation(Class&lt;A&gt; annotationClass) &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 或者是 getAnnotations() 方法</span></span><br><span class="line"><span class="hljs-comment">// public Annotation[] getAnnotations() &#123;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 如果获取到的 Annotation 如果不为 null，则就可以调用它们的属性方法</span></span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.Annotation;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.reflect.Field;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="hljs-keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Target</span>(ElementType.TYPE)</span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-meta">@interface</span> TestAnnotation &#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">id</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> -1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">msg</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> "Hi"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-meta">@interface</span> Check &#123;</span><br><span class="line">    <span class="hljs-function">String <span class="hljs-title">value</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-meta">@interface</span> Perform &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Hero</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">say</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"say from hero"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="hljs-string">"speak from hero"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@TestAnnotation</span>(msg = <span class="hljs-string">"hello"</span>)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Check</span>(value = <span class="hljs-string">"hi"</span>)</span><br><span class="line">    <span class="hljs-keyword">int</span> a;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Perform</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testMethod</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@SuppressWarnings</span>(<span class="hljs-string">"deprecation"</span>)</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test1</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        Hero hero = <span class="hljs-keyword">new</span> Hero();</span><br><span class="line">        hero.say();</span><br><span class="line">        hero.speak();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">boolean</span> hasAnnotation = Main.class.isAnnotationPresent(TestAnnotation.class);</span><br><span class="line">        <span class="hljs-keyword">if</span> (hasAnnotation) &#123;</span><br><span class="line">            TestAnnotation testAnnotation = Main.class.getAnnotation(TestAnnotation.class);</span><br><span class="line">            <span class="hljs-comment">// 获取类的注解</span></span><br><span class="line">            System.out.println(<span class="hljs-string">"id:"</span> + testAnnotation.id());</span><br><span class="line">            System.out.println(<span class="hljs-string">"msg:"</span> + testAnnotation.msg());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            Field a = Main.class.getDeclaredField(<span class="hljs-string">"a"</span>);</span><br><span class="line">            a.setAccessible(<span class="hljs-keyword">true</span>);</span><br><span class="line">            <span class="hljs-comment">// 获取一个成员变量上的注解</span></span><br><span class="line">            Check check = a.getAnnotation(Check.class);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">if</span> (check != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">                System.out.println(<span class="hljs-string">"check value:"</span> + check.value());</span><br><span class="line">            &#125;</span><br><span class="line">            Method testMethod = Main.class.getDeclaredMethod(<span class="hljs-string">"testMethod"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">if</span> (testMethod != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">                <span class="hljs-comment">// 获取方法中的注解</span></span><br><span class="line">                Annotation[] ans = testMethod.getAnnotations();</span><br><span class="line">                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ans.length; i++) &#123;</span><br><span class="line">                    System.out.println(<span class="hljs-string">"method testMethod annotation:"</span> + ans[i].annotationType().getSimpleName());</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (NoSuchFieldException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(e.getMessage());</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (SecurityException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(e.getMessage());</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，如果一个注解要在运行时被成功提取，那么 @Retention(RetentionPolicy.RUNTIME) 是必须的。</p>
+<h4 id="注解的使用场景"><a href="#注解的使用场景" class="headerlink" title="注解的使用场景"></a>注解的使用场景</h4><p>注解是一系列元数据，它提供数据用来解释程序代码，但是注解并非是所解释的代码本身的一部分。注解对于代码的运行效果没有直接影响。</p>
+<p>注解有许多用处，主要如下：</p>
+<ul>
+<li>提供信息给编译器： 编译器可以利用注解来探测错误和警告信息</li>
+<li>编译阶段时的处理： 软件工具可以用来利用注解信息来生成代码、Html 文档或者做其它相应处理。</li>
+<li>运行时的处理： 某些注解可以在程序运行的时候接受代码的提取</li>
+</ul>
+<hr>
+<p><a href="https://blog.csdn.net/briblue/article/details/73824058" target="_blank" rel="noopener">文章参考</a></p>
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/hexo/">hexo</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/09/09/2019-09-09/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">cmder</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#注解的定义">
+        <span class="has-mr-6">1</span>
+        <span>注解的定义</span>
+        </a></li><li>
+        <a class="is-flex" href="#注解的应用">
+        <span class="has-mr-6">2</span>
+        <span>注解的应用</span>
+        </a></li><li>
+        <a class="is-flex" href="#元注解">
+        <span class="has-mr-6">3</span>
+        <span>元注解</span>
+        </a></li><li>
+        <a class="is-flex" href="#注解的属性">
+        <span class="has-mr-6">4</span>
+        <span>注解的属性</span>
+        </a></li><li>
+        <a class="is-flex" href="#Java-预制的注解">
+        <span class="has-mr-6">5</span>
+        <span>Java 预制的注解</span>
+        </a></li><li>
+        <a class="is-flex" href="#注解的提取">
+        <span class="has-mr-6">6</span>
+        <span>注解的提取</span>
+        </a></li><li>
+        <a class="is-flex" href="#注解的使用场景">
+        <span class="has-mr-6">7</span>
+        <span>注解的使用场景</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="hexo blog分类方法" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
