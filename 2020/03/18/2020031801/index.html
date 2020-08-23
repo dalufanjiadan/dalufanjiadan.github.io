@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>springboot 监控 - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="actuator">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springboot 监控">
+<meta property="og:url" content="http://yoursite.com/2020/03/18/2020031801/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-05-20T09:15:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="springboot 监控">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="springboot 监控" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    springboot 监控
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-03-18T07:39:24.000Z">2020-03-18</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-03-18T07:39:24.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-03-18</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-20T09:15:54.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-20</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/springboot/">springboot</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 272 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                springboot 监控
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>io.micrometer<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>micrometer-registry-prometheus<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">management:</span></span><br><span class="line"><span class="hljs-attr">    endpoints:</span></span><br><span class="line"><span class="hljs-attr">        web:</span></span><br><span class="line"><span class="hljs-attr">            exposure:</span></span><br><span class="line"><span class="hljs-attr">                include:</span> <span class="hljs-string">"prometheus"</span></span><br><span class="line"><span class="hljs-attr">    metrics:</span></span><br><span class="line"><span class="hljs-attr">        tags:</span></span><br><span class="line"><span class="hljs-attr">            application:</span> <span class="hljs-string">$&#123;spring.application.name&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><ul>
+<li><a href="http://localhost:8000/actuator/prometheus" target="_blank" rel="noopener">http://localhost:8000/actuator/prometheus</a></li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># HELP jvm_threads_states_threads The current number of threads having NEW state</span><br><span class="line"># TYPE jvm_threads_states_threads gauge</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;waiting&quot;,&#125; 11.0</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;blocked&quot;,&#125; 0.0</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;timed-waiting&quot;,&#125; 4.0</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;runnable&quot;,&#125; 8.0</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;new&quot;,&#125; 0.0</span><br><span class="line">jvm_threads_states_threads&#123;application=&quot;demo&quot;,state=&quot;terminated&quot;,&#125; 0.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="对接-prometheus"><a href="#对接-prometheus" class="headerlink" title="对接 prometheus"></a>对接 prometheus</h3><p>prometheus 一款开源的监控 + 时序数据库 + 报警软件</p>
+<h4 id="prometheus-yml"><a href="#prometheus-yml" class="headerlink" title="prometheus.yml"></a>prometheus.yml</h4><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">scrape_configs:</span></span><br><span class="line">    <span class="hljs-comment"># 任意写，建议英文，不要包含特殊字符</span></span><br><span class="line"><span class="hljs-attr">    - job_name:</span> <span class="hljs-string">"spring"</span></span><br><span class="line">      <span class="hljs-comment"># 多久采集一次数据</span></span><br><span class="line"><span class="hljs-attr">      scrape_interval:</span> <span class="hljs-number">15</span><span class="hljs-string">s</span></span><br><span class="line">      <span class="hljs-comment"># 采集时的超时时间</span></span><br><span class="line"><span class="hljs-attr">      scrape_timeout:</span> <span class="hljs-number">10</span><span class="hljs-string">s</span></span><br><span class="line">      <span class="hljs-comment"># 采集的路径是啥</span></span><br><span class="line"><span class="hljs-attr">      metrics_path:</span> <span class="hljs-string">"/actuator/prometheus"</span></span><br><span class="line">      <span class="hljs-comment"># 采集服务的地址，设置成上面Spring Boot应用所在服务器的具体地址。</span></span><br><span class="line"><span class="hljs-attr">      static_configs:</span></span><br><span class="line"><span class="hljs-attr">          - targets:</span> <span class="hljs-string">["host.docker.internal:8000"]</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="在prometheus-yml-文件所在目录执行如下命令，启动Prometheus"><a href="#在prometheus-yml-文件所在目录执行如下命令，启动Prometheus" class="headerlink" title="在prometheus.yml 文件所在目录执行如下命令，启动Prometheus"></a>在prometheus.yml 文件所在目录执行如下命令，启动Prometheus</h4><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 9090:9090 \</span><br><span class="line">    -v $(<span class="hljs-built_in">pwd</span>)/prometheus.yml:/etc/prometheus/prometheus.yml \</span><br><span class="line">    prom/prometheus --config.file=/etc/prometheus/prometheus.yml</span><br></pre></td></tr></table></figure>
+
+<h4 id="test-1"><a href="#test-1" class="headerlink" title="test"></a>test</h4><ul>
+<li><a href="http://localhost:9090" target="_blank" rel="noopener">http://localhost:9090</a></li>
+</ul>
+<h3 id="Grafana可视化"><a href="#Grafana可视化" class="headerlink" title="Grafana可视化"></a>Grafana可视化</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 3001:3000 grafana/grafana</span><br></pre></td></tr></table></figure>
+
+<h4 id="test-2"><a href="#test-2" class="headerlink" title="test"></a>test</h4><ul>
+<li><a href="http://localhost:3001/" target="_blank" rel="noopener">http://localhost:3001/</a></li>
+</ul>
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/actuator/">actuator</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/05/2020050501/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">int[] &lt;==&gt; List&lt;Integer&gt;</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/12/2020031201/">
+                <span class="level-item">Best practices in MySQL</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#依赖">
+        <span class="has-mr-6">1</span>
+        <span>依赖</span>
+        </a></li><li>
+        <a class="is-flex" href="#config">
+        <span class="has-mr-6">2</span>
+        <span>config</span>
+        </a></li><li>
+        <a class="is-flex" href="#test">
+        <span class="has-mr-6">3</span>
+        <span>test</span>
+        </a></li><li>
+        <a class="is-flex" href="#对接-prometheus">
+        <span class="has-mr-6">4</span>
+        <span>对接 prometheus</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#prometheus-yml">
+        <span class="has-mr-6">4.1</span>
+        <span>prometheus.yml</span>
+        </a></li><li>
+        <a class="is-flex" href="#在prometheus-yml-文件所在目录执行如下命令，启动Prometheus">
+        <span class="has-mr-6">4.2</span>
+        <span>在prometheus.yml 文件所在目录执行如下命令，启动Prometheus</span>
+        </a></li><li>
+        <a class="is-flex" href="#test-1">
+        <span class="has-mr-6">4.3</span>
+        <span>test</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Grafana可视化">
+        <span class="has-mr-6">5</span>
+        <span>Grafana可视化</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#test-2">
+        <span class="has-mr-6">5.1</span>
+        <span>test</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="springboot 监控" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
