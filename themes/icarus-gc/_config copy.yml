@@ -1,7 +1,10 @@
 # Version of the Icarus theme that is currently used
 version: 2.6.0
 # Path or URL to the website's icon
-favicon: /images/favicon.svg
+# favicon: /images/favicon.svg
+favicon: /images/718smiley.png
+
+
 # Additional HTML meta tags in an array.
 meta: 
 # Path or URL to RSS atom.xml
