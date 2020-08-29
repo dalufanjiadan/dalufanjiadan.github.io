@@ -19,7 +19,7 @@
 <meta property="og:description" content="-">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-08-16T09:22:06.000Z">
+<meta property="og:updated_time" content="2020-08-29T13:32:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql cheat sheet">
 <meta name="twitter:description" content="-">
@@ -31,7 +31,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/718smiley.png">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -163,7 +163,7 @@
                     <!-- <time class="level-item has-text-grey" datetime="2019-09-14T16:58:13.000Z">2019-09-14</time> -->
                     <time class="level-item has-text-grey" datetime="2019-09-14T16:58:13.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2019-09-14</time>
                     
-                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-08-16T09:22:06.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-08-16</time>
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-08-29T13:32:31.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-08-29</time>
                     
                         
                 <div class="level-item">
@@ -174,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 398 words)
+                    16 minutes read (About 2400 words)
                 </span>
                 
                 
@@ -190,6 +190,214 @@
             <p>-</p>
 <a id="more"></a>
 
+<hr>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h4><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节数</th>
+<th>带符号最小值</th>
+<th>带符号最大值</th>
+<th>不带符号最小值</th>
+<th>不带符号最大值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TINYINT</td>
+<td>1</td>
+<td>-128</td>
+<td>127</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>2</td>
+<td>-32768</td>
+<td>32767</td>
+<td>0</td>
+<td>65535</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>3</td>
+<td>-8388608</td>
+<td>8388607</td>
+<td>0</td>
+<td>16777215</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>4</td>
+<td>-2147483648</td>
+<td>2147483647</td>
+<td>0</td>
+<td>4294967295</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>8</td>
+<td>-9223372036854775808</td>
+<td>9223372036854775807</td>
+<td>0</td>
+<td>18446744073709551616</td>
+</tr>
+</tbody></table>
+<p>整型（N）形式</p>
+<ul>
+<li>无论 N 等于多少，int 永远占 4 个字节</li>
+<li>N 表示的是显示宽度，不足的用 0 补足，超过的无视长度而直接显示整个数字，但这要整型设置了 unsigned zerofill 才有效</li>
+</ul>
+<h4 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h4><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节数</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4</td>
+<td>单精度浮点型</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>双精度浮点型</td>
+</tr>
+</tbody></table>
+<h4 id="定点型"><a href="#定点型" class="headerlink" title="定点型"></a>定点型</h4><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> test_decimal;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> test_decimal (</span><br><span class="line">	float_num <span class="hljs-built_in">float</span>(<span class="hljs-number">10</span>, <span class="hljs-number">2</span>),</span><br><span class="line">	double_num <span class="hljs-keyword">double</span>(<span class="hljs-number">20</span>, <span class="hljs-number">2</span>),</span><br><span class="line">	decimal_num <span class="hljs-built_in">decimal</span>(<span class="hljs-number">20</span>, <span class="hljs-number">2</span>)</span><br><span class="line">) <span class="hljs-keyword">ENGINE</span> = <span class="hljs-keyword">innodb</span> <span class="hljs-keyword">CHARSET</span> = utf8;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span></span><br><span class="line">	test_decimal</span><br><span class="line"><span class="hljs-keyword">VALUES</span></span><br><span class="line">	(</span><br><span class="line">		<span class="hljs-number">1234567.66</span>,</span><br><span class="line">		<span class="hljs-number">1234567899000000.66</span>,</span><br><span class="line">		<span class="hljs-number">1234567899000000.66</span></span><br><span class="line">	);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span></span><br><span class="line">	test_decimal</span><br><span class="line"><span class="hljs-keyword">VALUES</span></span><br><span class="line">	(</span><br><span class="line">		<span class="hljs-number">1234567.66</span>,</span><br><span class="line">		<span class="hljs-number">12345678990000000.66</span>,</span><br><span class="line">		<span class="hljs-number">12345678990000000.66</span></span><br><span class="line">	);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>float/double 在 db 中存储的是近似值，而 decimal 则是以字符串形式进行保存的</li>
+<li>decimal(M,D)的规则和 float/double 相同，但区别在 float/double 在不指定 M、D 时默认按照实际精度来处理而 decimal 在不指定 M、D 时默认为 decimal(10, 0)</li>
+</ul>
+<h4 id="日期类型"><a href="#日期类型" class="headerlink" title="日期类型"></a>日期类型</h4><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节数</th>
+<th>格式</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>date</td>
+<td>3</td>
+<td>yyyy-MM-dd</td>
+<td>存储日期值</td>
+</tr>
+<tr>
+<td>time</td>
+<td>3</td>
+<td>HH:mm:ss</td>
+<td>存储时分秒</td>
+</tr>
+<tr>
+<td>year</td>
+<td>1</td>
+<td>yyyy</td>
+<td>存储年</td>
+</tr>
+<tr>
+<td>datetime</td>
+<td>8</td>
+<td>yyyy-MM-dd HH:mm:ss</td>
+<td>存储日期+ 时间</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>4</td>
+<td>yyyy-MM-dd HH:mm:ss</td>
+<td>存储日期+ 时间，可作时间戳</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">DROP</span> <span class="hljs-keyword">TABLE</span> <span class="hljs-keyword">IF</span> <span class="hljs-keyword">EXISTS</span> test_time;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">TABLE</span> test_time (</span><br><span class="line">	date_value <span class="hljs-built_in">date</span>,</span><br><span class="line">	time_value <span class="hljs-built_in">time</span>,</span><br><span class="line">	year_value <span class="hljs-keyword">year</span>,</span><br><span class="line">	datetime_value datetime,</span><br><span class="line">	timestamp_value <span class="hljs-built_in">timestamp</span></span><br><span class="line">) <span class="hljs-keyword">ENGINE</span> = <span class="hljs-keyword">innodb</span> <span class="hljs-keyword">CHARSET</span> = utf8;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span></span><br><span class="line">	test_time</span><br><span class="line"><span class="hljs-keyword">VALUES</span></span><br><span class="line">(<span class="hljs-keyword">NOW</span>(), <span class="hljs-keyword">NOW</span>(), <span class="hljs-keyword">NOW</span>(), <span class="hljs-keyword">NOW</span>(), <span class="hljs-keyword">NOW</span>());</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>datetime 占 8 个字节，timestamp 占 4 个字节</p>
+</li>
+<li><p>由于大小的区别，datetime 与 timestamp 能存储的时间范围也不同，datetime 的存储范围为 1000-01-01 00:00:00——9999-12-31 23:59:59，timestamp 存储的时间范围为 19700101080001——20380119111407</p>
+</li>
+<li><p>datetime 默认值为空，当插入的值为 null 时，该列的值就是 null；timestamp 默认值不为空，当插入的值为 null 的时候，mysql 会取当前时间</p>
+</li>
+<li><p>datetime 存储的时间与时区无关，timestamp 存储的时间及显示的时间都依赖于当前时区</p>
+</li>
+<li><p>在实际工作中，一张表往往我们会有两个默认字段，一个记录创建时间而另一个记录最新一次的更新时间，这种时候可以使用 timestamp 类型来实现：</p>
+<figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create_at timestamp DEFAULT CURRENT_TIMESTAMP <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">"创建时间"</span>,</span><br><span class="line">update_at <span class="hljs-built_in">timestamp</span> <span class="hljs-keyword">DEFAULT</span> <span class="hljs-keyword">CURRENT_TIMESTAMP</span> <span class="hljs-keyword">ON</span> <span class="hljs-keyword">UPDATE</span> <span class="hljs-keyword">CURRENT_TIMESTAMP</span> <span class="hljs-keyword">COMMENT</span> <span class="hljs-string">"修改时间"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h4><p>char、varchar、text、blob</p>
+<p>它们的存储方式和数据的检索方式都不一样.数据的检索效率是：char &gt; varchar &gt; text.空间占用方面，就要具体情况具体分析了。</p>
+<ul>
+<li>char：存储定长数据很方便，CHAR 字段上的索引效率级高，必须在括号里定义长度，可以有默认值，比如定义 char(10)，那么不论你存储的数据是否达到了 10 个字符，都要占去 10 个字符的空间（自动用空格填充），且在检索的时候后面的空格会隐藏掉，所以检索出来的数据需要记得用什么 trim 之类的函数去过滤空格。</li>
+<li>varchar：存储变长数据，但存储效率没有 CHAR 高，必须在括号里定义长度，可以有默认值。保存数据的时候，不进行空格自动填充，而且如果数据存在空格时，当值保存和检索时尾部的空格仍会保留。另外，varchar 类型的实际长度是它的值的实际长度+1，这一个字节用于保存实际使用了多大的长度。</li>
+<li>text：存储可变长度的非 Unicode 数据，最大长度为 2^31-1 个字符。text 列不能有默认值，存储或检索过程中，不存在大小写转换，后面如果指定长度，不会报错误，但是这个长度是不起作用的，意思就是你插入数据的时候，超过你指定的长度还是可以正常插入。</li>
+</ul>
+<p>关于存储空间：</p>
+<p>在使用 UTF8 字符集的时候，手册上是这样描叙的：</p>
+<ul>
+<li>基本拉丁字母、数字和标点符号使用一个字节；</li>
+<li>大多数的欧洲和中东手写字母适合两个字节序列：扩展的拉丁字母（包括发音符号、长音符号、重音符号、低音符号和其它音符）、西里尔字母、希腊语、亚美尼亚语、希伯来语、阿拉伯语、叙利亚语和其它语言；</li>
+<li>韩语、中文和日本象形文字使用三个字节序列。</li>
+</ul>
+<p>结论：</p>
+<ul>
+<li>char(M),varchar(M) M 表示字符长度</li>
+<li>经常变化的字段用 varchar；</li>
+<li>知道固定长度的用 char；</li>
+<li>尽量用 varchar；</li>
+<li>超过 255 字节的只能用 varchar 或者 text；</li>
+<li>能用 varchar 的地方不用 text；</li>
+<li>能够用数字类型的字段尽量选择数字类型而不用字符串类型的（电话号码），这会降低查询和连接的性能，并会增加存储开销。这是因为引擎在处理查询和连接回逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。</li>
+</ul>
+<h4 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h4><p>In the following table, M represents the declared column length in characters for nonbinary string types and bytes for binary string types. L represents the actual length in bytes of a given string value.</p>
+<table>
+<thead>
+<tr>
+<th>Data Type</th>
+<th>Storage Required</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CHAR(M)</td>
+<td>The compact family of InnoDB row formats optimize storage for variable-length character sets. See COMPACT Row Format Storage Characteristics. Otherwise, M × w bytes, &lt;= M &lt;= 255, where w is the number of bytes required for the maximum-length character in the character set.</td>
+</tr>
+<tr>
+<td>BINARY(M)</td>
+<td>M bytes, 0 &lt;= M &lt;= 255</td>
+</tr>
+<tr>
+<td>VARCHAR(M), VARBINARY(M)</td>
+<td>L + 1 bytes if column values require 0 − 255 bytes, L + 2 bytes if values may require more than 255 bytes</td>
+</tr>
+<tr>
+<td>TINYBLOB, TINYTEXT</td>
+<td>L + 1 bytes, where L &lt; 28</td>
+</tr>
+<tr>
+<td>BLOB, TEXT</td>
+<td>L + 2 bytes, where L &lt; 216</td>
+</tr>
+<tr>
+<td>MEDIUMBLOB, MEDIUMTEXT</td>
+<td>L + 3 bytes, where L &lt; 224</td>
+</tr>
+<tr>
+<td>LONGBLOB, LONGTEXT</td>
+<td>L + 4 bytes, where L &lt; 232</td>
+</tr>
+<tr>
+<td>ENUM(‘value1’,’value2’,…)</td>
+<td>1 or 2 bytes, depending on the number of enumeration values (65,535 values maximum)</td>
+</tr>
+<tr>
+<td>SET(‘value1’,’value2’,…)</td>
+<td>1, 2, 3, 4, or 8 bytes, depending on the number of set members (64 members maximum)</td>
+</tr>
+</tbody></table>
 <hr>
 <h3 id="日期处理"><a href="#日期处理" class="headerlink" title="日期处理"></a>日期处理</h3><ul>
 <li><code>SELECT now();</code> - 当前日期时间</li>
@@ -232,6 +440,24 @@
 
 <h4 id="获取自增"><a href="#获取自增" class="headerlink" title="获取自增"></a>获取自增</h4><p>插入记录后，传入的参数<code>role</code>中的相应的属性<code>id</code>已经被设置为该记录在数据库中的 id 了。因此直接使用<code>role.getId()</code>即可获取记录 id。</p>
 <p>–bb</p>
+<hr>
+<h3 id="引擎"><a href="#引擎" class="headerlink" title="引擎"></a>引擎</h3><ul>
+<li>INNODB</li>
+<li>MYISAM</li>
+</ul>
+<h4 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h4><ul>
+<li>InnoDB 支持事务，MyISAM 不支持事务。这是 MySQL 将默认存储引擎从 MyISAM 变成 InnoDB 的重要原因之一</li>
+<li>InnoDB 支持外键，而 MyISAM 不支持。对一个包含外键的 InnoDB 表转为 MYISAM 会失败</li>
+<li>InnoDB 是聚集索引，MyISAM 是非聚集索引。聚簇索引的文件存放在主键索引的叶子节点上，因此 InnoDB 必须要有主键，通过主键索引效率很高。但是辅助索引需要两次查询，先查询到主键，然后再通过主键查询到数据。因此，主键不应该过大，因为主键太大，其他索引也都会很大。而 MyISAM 是非聚集索引，数据文件是分离的，索引保存的是数据文件的指针。主键索引和辅助索引是独立的</li>
+<li>InnoDB 不保存表的具体行数，执行 select count(*) from table 时需要全表扫描。而 MyISAM 用一个变量保存了整个表的行数，执行上述语句时只需要读出该变量即可，速度很快</li>
+<li>InnoDB 最小的锁粒度是行锁，MyISAM 最小的锁粒度是表锁。一个更新语句会锁住整张表，导致其他查询和更新都会被阻塞，因此并发访问受限。这也是 MySQL 将默认存储引擎从 MyISAM 变成 InnoDB 的重要原因之一</li>
+</ul>
+<h4 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h4><ul>
+<li>是否要支持事务，如果要请选择 InnoDB，如果不需要可以考虑 MyISAM</li>
+<li>如果表中绝大多数都只是读查询，可以考虑 MyISAM，如果既有读写也挺频繁，请使用 InnoDB</li>
+<li>系统奔溃后，MyISAM 恢复起来更困难，能否接受，不能接受就选 InnoDB</li>
+<li>MySQL5.5 版本开始 Innodb 已经成为 Mysql 的默认引擎(之前是 MyISAM)</li>
+</ul>
 
         </div>
         
@@ -293,37 +519,77 @@
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#日期处理">
+        <a class="is-flex" href="#数据类型">
         <span class="has-mr-6">1</span>
+        <span>数据类型</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#整型">
+        <span class="has-mr-6">1.1</span>
+        <span>整型</span>
+        </a></li><li>
+        <a class="is-flex" href="#浮点型">
+        <span class="has-mr-6">1.2</span>
+        <span>浮点型</span>
+        </a></li><li>
+        <a class="is-flex" href="#定点型">
+        <span class="has-mr-6">1.3</span>
+        <span>定点型</span>
+        </a></li><li>
+        <a class="is-flex" href="#日期类型">
+        <span class="has-mr-6">1.4</span>
+        <span>日期类型</span>
+        </a></li><li>
+        <a class="is-flex" href="#字符串类型">
+        <span class="has-mr-6">1.5</span>
+        <span>字符串类型</span>
+        </a></li><li>
+        <a class="is-flex" href="#官网">
+        <span class="has-mr-6">1.6</span>
+        <span>官网</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#日期处理">
+        <span class="has-mr-6">2</span>
         <span>日期处理</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#日期时间选取函数">
-        <span class="has-mr-6">1.1</span>
+        <span class="has-mr-6">2.1</span>
         <span>日期时间选取函数</span>
         </a></li><li>
         <a class="is-flex" href="#日期计算">
-        <span class="has-mr-6">1.2</span>
+        <span class="has-mr-6">2.2</span>
         <span>日期计算</span>
         </a></li><li>
         <a class="is-flex" href="#日期转换函数">
-        <span class="has-mr-6">1.3</span>
+        <span class="has-mr-6">2.3</span>
         <span>日期转换函数</span>
         </a></li></ul></li><li>
         <a class="is-flex" href="#插入">
-        <span class="has-mr-6">2</span>
+        <span class="has-mr-6">3</span>
         <span>插入</span>
         </a><ul class="menu-list"><li>
         <a class="is-flex" href="#获取插入记录的自增长-ID">
-        <span class="has-mr-6">2.1</span>
+        <span class="has-mr-6">3.1</span>
         <span>获取插入记录的自增长 ID</span>
         </a></li><li>
         <a class="is-flex" href="#sql">
-        <span class="has-mr-6">2.2</span>
+        <span class="has-mr-6">3.2</span>
         <span>sql</span>
         </a></li><li>
         <a class="is-flex" href="#获取自增">
-        <span class="has-mr-6">2.3</span>
+        <span class="has-mr-6">3.3</span>
         <span>获取自增</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#引擎">
+        <span class="has-mr-6">4</span>
+        <span>引擎</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#对比">
+        <span class="has-mr-6">4.1</span>
+        <span>对比</span>
+        </a></li><li>
+        <a class="is-flex" href="#如何选择">
+        <span class="has-mr-6">4.2</span>
+        <span>如何选择</span>
         </a></li></ul></li></ul>
         </div>
     </div>
