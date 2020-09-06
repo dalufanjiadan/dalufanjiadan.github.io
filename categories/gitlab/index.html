@@ -7,22 +7,17 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>gitlab cicd - Hexo</title>
+<title>Category: gitlab - Hexo</title>
 
 
-    <meta name="description" content="-">
-<meta name="keywords" content="gitlab">
-<meta property="og:type" content="article">
-<meta property="og:title" content="gitlab cicd">
-<meta property="og:url" content="http://yoursite.com/2020/09/03/2020090301/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/categories/gitlab/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="-">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-09-06T04:18:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitlab cicd">
-<meta name="twitter:description" content="-">
+<meta name="twitter:title" content="Hexo">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -94,7 +89,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/dog.png" alt="gitlab cicd" height="28">
+                <img src="/images/dog.png" alt="Hexo" height="28">
             
             </a>
         </div>
@@ -131,10 +126,6 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
-                    <i class="fas fa-list-ul"></i>
-                </a>
-                
                 
                 <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
@@ -149,12 +140,25 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    <div class="card-content">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+        <ul>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">gitlab</a></li>
+        </ul>
+        </nav>
+    </div>
+</div>
+
+    <div class="card">
     
     <div class="card-content article ">
             <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
                 
-                    <!-- <i class="fas fa-angle-double-right"></i> -->
-                    gitlab cicd
+                    <a class="has-link-black-ter" href="/2020/09/03/2020090301/">
+                        <!-- <i class="fas fa-angle-double-right"></i> -->
+                        gitlab cicd</a>
                 
             </h1>
                
@@ -183,44 +187,32 @@
         
         <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                gitlab cicd
+                <a class="has-link-black-ter" href="/2020/09/03/2020090301/">gitlab cicd</a>
             
         </h1> -->
         <div class="content">
             <p>-</p>
-<a id="more"></a>
-
-<h3 id="创建-container-runner"><a href="#创建-container-runner" class="headerlink" title="创建 container runner"></a>创建 container runner</h3><h4 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h4><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/ubuntu/.devcontainer/base.Dockerfile</span></span><br><span class="line"><span class="hljs-keyword">ARG</span> VARIANT=<span class="hljs-string">"focal"</span></span><br><span class="line"><span class="hljs-keyword">FROM</span> mcr.microsoft.com/vscode/devcontainers/base:<span class="hljs-number">0</span>-$&#123;VARIANT&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># [Optional] Uncomment this section to install additional OS packages.</span></span><br><span class="line"><span class="hljs-comment"># RUN apt-get update &amp;&amp; export DEBIAN_FRONTEND=noninteractive \</span></span><br><span class="line"><span class="hljs-comment">#     &amp;&amp; apt-get -y install --no-install-recommends &lt;your-package-list-here&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | sudo apt-get install gitlab-ci-multi-runner</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> <span class="hljs-built_in">printf</span> <span class="hljs-string">'https://gitlab.uuzu.com/\nAMJJgESUzDLumCZgSU5y\nrunner\nrunner\nshell\n'</span> | sudo gitlab-ci-multi-runner register</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> gitlab-ci-multi-runner start</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | apt-get install rsync</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | ssh-keygen -t rsa -C <span class="hljs-string">"<span class="hljs-variable">$(whoami)</span>@<span class="hljs-variable">$(hostname)</span>-<span class="hljs-variable">$(date -I)</span>"</span></span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Install GitLab Runner</li>
-<li>Specify the following URL during the Runner setup: <a href="https://gitlab.uuzu.com/" target="_blank" rel="noopener">https://gitlab.uuzu.com/</a></li>
-<li>Use the following registration token during setup: AMJJgESUzDLumCZgSU5y</li>
-<li>Start the Runner! <code>gitlab-ci-multi-runner start</code></li>
-<li>查看 runner list <code>sudo gitlab-runner list</code></li>
-</ul>
-<hr>
-<h3 id="gitlab-ci-yml"><a href="#gitlab-ci-yml" class="headerlink" title=".gitlab-ci.yml"></a>.gitlab-ci.yml</h3><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">stages:</span></span><br><span class="line"><span class="hljs-bullet">    -</span> <span class="hljs-string">build_QA</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 测试</span></span><br><span class="line"><span class="hljs-attr">build_QA:</span></span><br><span class="line"><span class="hljs-attr">    script:</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">echo</span> <span class="hljs-string">"hello"</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">rsync</span> <span class="hljs-bullet">-rve</span> <span class="hljs-string">ssh</span> <span class="hljs-string">test.txt</span> <span class="hljs-string">/workspaces/gitlab-runner</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-attr">    stage:</span> <span class="hljs-string">build_QA</span></span><br><span class="line"><span class="hljs-attr">    only:</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">/release/</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="gitlab-项目配置"><a href="#gitlab-项目配置" class="headerlink" title="gitlab 项目配置"></a>gitlab 项目配置</h3><h4 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h4><p>SSH_PRIVATE_KEY：把本机（runner所在机器）的私钥复制过来：~/.ssh/id_rsa</p>
-<p><img src="https://github.com/dalufanjiadan/images/blob/master/WX20200903-182727@2x.png?raw=true" alt="-"></p>
-<h4 id="runner"><a href="#runner" class="headerlink" title="runner"></a>runner</h4><p><img src="https://github.com/dalufanjiadan/images/blob/master/WX20200903-183034@2x.png?raw=true" alt="-"></p>
-
         </div>
         
-        <hr style="height:1px;margin:1rem 0"/>
-        <div class="level is-size-7 is-uppercase">
+        
+            <hr style="height:1px;margin:1rem 0"/>
+                <div class="level is-mobile is-flex">
+                    <div class="level-start">
+                        
+                        <div class="level-item is-size-7 is-uppercase">
+                            <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                            <a class="has-link-grey -link" href="/tags/gitlab/">gitlab</a>
+                        </div>
+                        
+                    </div>
             <div class="level-start">
                 <div class="level-item">
-                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/gitlab/">gitlab</a>
+                <a class="button is-size-7 is-light" href="/2020/09/03/2020090301/#more">Read More</a>
                 </div>
             </div>
         </div>
         
         
-        
     </div>
 </div>
 
@@ -228,19 +220,7 @@
 
 
 
-<div class="card card-transparent">
-    <div class="level post-navigation is-flex-wrap is-mobile">
-        
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/08/31/2020083101/">
-                <span class="level-item">Dockerfile cheat sheet</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
-        
-    </div>
-</div>
+
 
 
 </div>
@@ -252,42 +232,15 @@
 <div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
     
         
-<!-- <div class="card widget" id="toc"> -->
-<div class="card widget column-left is-sticky" id="toc">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                Catalogue
-            </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#创建-container-runner">
-        <span class="has-mr-6">1</span>
-        <span>创建 container runner</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#dockerfile">
-        <span class="has-mr-6">1.1</span>
-        <span>dockerfile</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#gitlab-ci-yml">
-        <span class="has-mr-6">2</span>
-        <span>.gitlab-ci.yml</span>
-        </a></li><li>
-        <a class="is-flex" href="#gitlab-项目配置">
-        <span class="has-mr-6">3</span>
-        <span>gitlab 项目配置</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#Variables">
-        <span class="has-mr-6">3.1</span>
-        <span>Variables</span>
-        </a></li><li>
-        <a class="is-flex" href="#runner">
-        <span class="has-mr-6">3.2</span>
-        <span>runner</span>
-        </a></li></ul></li></ul>
-        </div>
-    </div>
-</div>
+<div class="widget column-left is-sticky" id="photo"> 
+    <!-- <div class="card-content"> -->
+        
+        <!-- <div class="card widget is-sticky"> -->
+            <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+        <!-- </div> -->
 
+    <!-- </div>  -->
+</div>
     
     
         <div class="column-right-shadow is-hidden-widescreen ">
@@ -306,7 +259,7 @@
             <div class="level-start has-text-centered-mobile">
                 <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
                 <!-- 
-                    <img src="/images/dog.png" alt="gitlab cicd" height="28">
+                    <img src="/images/dog.png" alt="Hexo" height="28">
                  -->
                 <!-- </a> -->
                 <p class="is-size-7">
