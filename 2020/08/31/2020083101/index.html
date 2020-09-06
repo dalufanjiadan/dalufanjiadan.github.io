@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Dockerfile cheat sheet - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Dockerfile cheat sheet">
+<meta property="og:url" content="http://yoursite.com/2020/08/31/2020083101/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-08-31T10:02:33.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Dockerfile cheat sheet">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/718smiley.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="Dockerfile cheat sheet" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    Dockerfile cheat sheet
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-08-31T09:45:20.000Z">2020-08-31</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-08-31T09:45:20.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-08-31</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-08-31T10:02:33.964Z"><i class="far fa-calendar-check">&nbsp;</i>2020-08-31</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/docker/">docker</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes read (About 1270 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Dockerfile cheat sheet
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<h3 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h3><p>Usage:</p>
+<ul>
+<li>FROM <image></image></li>
+<li>FROM <image>:<tag></tag></image></li>
+<li>FROM <image>@<digest></digest></image></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>FROM must be the first non-comment instruction in the Dockerfile.</li>
+<li>FROM can appear multiple times within a single Dockerfile in order to create multiple images. Simply make a note of the last image ID output by the commit before each new FROM command.</li>
+<li>The tag or digest values are optional. If you omit either of them, the builder assumes a latest by default. The builder returns an error if it cannot match the tag value.</li>
+</ul>
+<h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><p>Usage:</p>
+<ul>
+<li>MAINTAINER <name><br>The MAINTAINER instruction allows you to set the Author field of the generated images.</name></li>
+</ul>
+<h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><p>Usage:</p>
+<ul>
+<li>RUN <command> (shell form, the command is run in a shell, which by default is /bin/sh -c on Linux or cmd /S /C on Windows)</li>
+<li>RUN [“<executable>“, “<param1>“, “<param2>“] (exec form)</param2></param1></executable></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>The exec form makes it possible to avoid shell string munging, and to RUN commands using a base image that does not contain the specified shell executable.</li>
+<li>The default shell for the shell form can be changed using the SHELL command.</li>
+<li>Normal shell processing does not occur when using the exec form. For example, RUN [“echo”, “$HOME”] will not do variable substitution on $HOME.</li>
+</ul>
+<h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><p>Usage:</p>
+<ul>
+<li><p>CMD [“<executable>“,”<param1>“,”<param2>“] (exec form, this is the preferred form)</param2></param1></executable></p>
+</li>
+<li><p>CMD [“<param1>“,”<param2>“] (as default parameters to ENTRYPOINT)</param2></param1></p>
+</li>
+<li><p>CMD <command> <param1> <param2> (shell form)</param2></param1></p>
+<p>Information:</p>
+</li>
+<li><p>The main purpose of a CMD is to provide defaults for an executing container. These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.</p>
+</li>
+<li><p>There can only be one CMD instruction in a Dockerfile. If you list more than one CMD then only the last CMD will take effect.</p>
+</li>
+<li><p>If CMD is used to provide default arguments for the ENTRYPOINT instruction, both the CMD and ENTRYPOINT instructions should be specified with the JSON array format.</p>
+</li>
+<li><p>If the user specifies arguments to docker run then they will override the default specified in CMD.<br>Normal shell processing does not occur when using the exec form. For example, CMD [“echo”, “$HOME”] will not do variable substitution on $HOME.</p>
+</li>
+</ul>
+<h3 id="LABEL"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</h3><p>Usage:</p>
+<ul>
+<li>LABEL <key>=<value> [<key>=<value> …]</value></key></value></key></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>The LABEL instruction adds metadata to an image.</li>
+<li>To include spaces within a LABEL value, use quotes and backslashes as you would in command-line parsing.</li>
+<li>Labels are additive including LABELs in FROM images.</li>
+<li>If Docker encounters a label/key that already exists, the new value overrides any previous labels with identical keys.</li>
+<li>To view an image’s labels, use the docker inspect command. They will be under the “Labels” JSON attribute.</li>
+</ul>
+<h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><p>Usage:</p>
+<ul>
+<li>EXPOSE <port> [<port> …]</port></port></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Informs Docker that the container listens on the specified network port(s) at runtime.</li>
+<li>EXPOSE does not make the ports of the container accessible to the host.</li>
+</ul>
+<h3 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h3><p>Usage:</p>
+<ul>
+<li>ENV <key> <value></value></key></li>
+<li>ENV <key>=<value> [<key>=<value> …]</value></key></value></key></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>The ENV instruction sets the environment variable <key> to the value <value>.</value></key></li>
+<li>The value will be in the environment of all “descendant” Dockerfile commands and can be replaced inline as well.</li>
+<li>The environment variables set using ENV will persist when a container is run from the resulting image.</li>
+<li>The first form will set a single variable to a value with the entire string after the first space being treated as the <value> - including characters such as spaces and quotes.</value></li>
+</ul>
+<h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><p>Usage:</p>
+<ul>
+<li>ADD <src> [<src> …] <dest></dest></src></src></li>
+<li>ADD [“<src>“, … “<dest>“] (this form is required for paths containing whitespace)</dest></src></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Copies new files, directories, or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.</dest></src></li>
+<li><src> may contain wildcards and matching will be done using Go’s filepath.Match rules.</src></li>
+<li>If <src> is a file or directory, then they must be relative to the source directory that is being built (the context of the build).</src></li>
+<li><dest> is an absolute path, or a path relative to WORKDIR.</dest></li>
+<li>If <dest> doesn’t exist, it is created along with all missing directories in its path.</dest></li>
+</ul>
+<h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><p>Usage:</p>
+<ul>
+<li>COPY <src> [<src> …] <dest></dest></src></src></li>
+<li>COPY [“<src>“, … “<dest>“] (this form is required for paths containing whitespace)</dest></src></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Copies new files or directories from <src> and adds them to the filesystem of the image at the path <dest>.</dest></src></li>
+<li><src> may contain wildcards and matching will be done using Go’s filepath.Match rules.</src></li>
+<li><src> must be relative to the source directory that is being built (the context of the build).</src></li>
+<li><dest> is an absolute path, or a path relative to WORKDIR.</dest></li>
+<li>If <dest> doesn’t exist, it is created along with all missing directories in its path.</dest></li>
+</ul>
+<h3 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h3><p>Usage:</p>
+<ul>
+<li>ENTRYPOINT [“<executable>“, “<param1>“, “<param2>“] (exec form, preferred)</param2></param1></executable></li>
+<li>ENTRYPOINT <command> <param1> <param2> (shell form)</param2></param1></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Allows you to configure a container that will run as an executable.</li>
+<li>Command line arguments to docker run <image> will be appended after all elements in an exec form ENTRYPOINT and will override all elements specified using CMD.</image></li>
+<li>The shell form prevents any CMD or run command line arguments from being used, but the ENTRYPOINT will start via the shell. This means the executable will not be PID 1 nor will it receive UNIX signals. Prepend exec to get around this drawback.</li>
+<li>Only the last ENTRYPOINT instruction in the Dockerfile will have an effect.</li>
+</ul>
+<h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><p>Usage:</p>
+<ul>
+<li><p>VOLUME [“<path>“, …]</path></p>
+</li>
+<li><p>VOLUME <path> [<path> …]</path></path></p>
+</li>
+<li><p>Creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.</p>
+</li>
+</ul>
+<h3 id="USER"><a href="#USER" class="headerlink" title="USER"></a>USER</h3><p>Usage:</p>
+<ul>
+<li>USER &lt;username | UID&gt;</li>
+</ul>
+<p>The USER instruction sets the user name or UID to use when running the image and for any RUN, CMD and ENTRYPOINT instructions that follow it in the Dockerfile.</p>
+<h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><p>Usage:</p>
+<ul>
+<li>WORKDIR &lt;/path/to/workdir&gt;</li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Sets the working directory for any RUN, CMD, ENTRYPOINT, COPY, and ADD instructions that follow it.</li>
+<li>It can be used multiple times in the one Dockerfile. If a relative path is provided, it will be relative to the path of the previous WORKDIR instruction.</li>
+</ul>
+<h3 id="ARG"><a href="#ARG" class="headerlink" title="ARG"></a>ARG</h3><p>Usage:</p>
+<ul>
+<li>ARG <name>[=<default value>]</default></name></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Defines a variable that users can pass at build-time to the builder with the docker build command using the –build-arg <varname>=<value> flag.<br>Multiple variables may be defined by specifying ARG multiple times.</value></varname></li>
+<li>It is not recommended to use build-time variables for passing secrets like github keys, user credentials, etc. Build-time variable values are visible to any user of the image with the docker history command.</li>
+<li>Environment variables defined using the ENV instruction always override an ARG instruction of the same name.</li>
+<li>Docker has a set of predefined ARG variables that you can use without a corresponding ARG instruction in the Dockerfile.<br>HTTP_PROXY and http_proxy<br>HTTPS_PROXY and https_proxy<br>FTP_PROXY and ftp_proxy<br>NO_PROXY and no_proxy<br>Reference</li>
+</ul>
+<h3 id="ONBUILD"><a href="#ONBUILD" class="headerlink" title="ONBUILD"></a>ONBUILD</h3><p>Usage:</p>
+<ul>
+<li>ONBUILD <dockerfile instruction></dockerfile></li>
+</ul>
+<p>Information:</p>
+<p>Adds to the image a trigger instruction to be executed at a later time, when the image is used as the base for another build. The trigger will be executed in the context of the downstream build, as if it had been inserted immediately after the FROM instruction in the downstream Dockerfile.<br>Any build instruction can be registered as a trigger.<br>Triggers are inherited by the “child” build only. In other words, they are not inherited by “grand-children” builds.<br>The ONBUILD instruction may not trigger FROM, MAINTAINER, or ONBUILD instructions.<br>Reference - Best Practices</p>
+<h3 id="STOPSIGNAL"><a href="#STOPSIGNAL" class="headerlink" title="STOPSIGNAL"></a>STOPSIGNAL</h3><p>Usage:</p>
+<ul>
+<li>STOPSIGNAL <signal></signal></li>
+</ul>
+<p>The STOPSIGNAL instruction sets the system call signal that will be sent to the container to exit. This signal can be a valid unsigned number that matches a position in the kernel’s syscall table, for instance 9, or a signal name in the format SIGNAME, for instance SIGKILL.</p>
+<h3 id="HEALTHCHECK"><a href="#HEALTHCHECK" class="headerlink" title="HEALTHCHECK"></a>HEALTHCHECK</h3><p>Usage:</p>
+<ul>
+<li>HEALTHCHECK [<options>] CMD <command> (check container health by running a command inside the container)</options></li>
+<li>HEALTHCHECK NONE (disable any healthcheck inherited from the base image)</li>
+</ul>
+<h3 id="SHELL"><a href="#SHELL" class="headerlink" title="SHELL"></a>SHELL</h3><p>Usage:</p>
+<ul>
+<li>SHELL [“<executable>“, “<param1>“, “<param2>“]</param2></param1></executable></li>
+</ul>
+<p>Information:</p>
+<ul>
+<li>Allows the default shell used for the shell form of commands to be overridden.</li>
+<li>Each SHELL instruction overrides all previous SHELL instructions, and affects all subsequent instructions.</li>
+<li>Allows an alternate shell be used such as zsh, csh, tcsh, powershell, and others.</li>
+</ul>
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/docker/">docker</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/09/03/2020090301/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">gitlab cicd</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/08/23/2020082301/">
+                <span class="level-item">Linux Commands Cheat Sheet</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#FROM">
+        <span class="has-mr-6">1</span>
+        <span>FROM</span>
+        </a></li><li>
+        <a class="is-flex" href="#MAINTAINER">
+        <span class="has-mr-6">2</span>
+        <span>MAINTAINER</span>
+        </a></li><li>
+        <a class="is-flex" href="#RUN">
+        <span class="has-mr-6">3</span>
+        <span>RUN</span>
+        </a></li><li>
+        <a class="is-flex" href="#CMD">
+        <span class="has-mr-6">4</span>
+        <span>CMD</span>
+        </a></li><li>
+        <a class="is-flex" href="#LABEL">
+        <span class="has-mr-6">5</span>
+        <span>LABEL</span>
+        </a></li><li>
+        <a class="is-flex" href="#EXPOSE">
+        <span class="has-mr-6">6</span>
+        <span>EXPOSE</span>
+        </a></li><li>
+        <a class="is-flex" href="#ENV">
+        <span class="has-mr-6">7</span>
+        <span>ENV</span>
+        </a></li><li>
+        <a class="is-flex" href="#ADD">
+        <span class="has-mr-6">8</span>
+        <span>ADD</span>
+        </a></li><li>
+        <a class="is-flex" href="#COPY">
+        <span class="has-mr-6">9</span>
+        <span>COPY</span>
+        </a></li><li>
+        <a class="is-flex" href="#ENTRYPOINT">
+        <span class="has-mr-6">10</span>
+        <span>ENTRYPOINT</span>
+        </a></li><li>
+        <a class="is-flex" href="#VOLUME">
+        <span class="has-mr-6">11</span>
+        <span>VOLUME</span>
+        </a></li><li>
+        <a class="is-flex" href="#USER">
+        <span class="has-mr-6">12</span>
+        <span>USER</span>
+        </a></li><li>
+        <a class="is-flex" href="#WORKDIR">
+        <span class="has-mr-6">13</span>
+        <span>WORKDIR</span>
+        </a></li><li>
+        <a class="is-flex" href="#ARG">
+        <span class="has-mr-6">14</span>
+        <span>ARG</span>
+        </a></li><li>
+        <a class="is-flex" href="#ONBUILD">
+        <span class="has-mr-6">15</span>
+        <span>ONBUILD</span>
+        </a></li><li>
+        <a class="is-flex" href="#STOPSIGNAL">
+        <span class="has-mr-6">16</span>
+        <span>STOPSIGNAL</span>
+        </a></li><li>
+        <a class="is-flex" href="#HEALTHCHECK">
+        <span class="has-mr-6">17</span>
+        <span>HEALTHCHECK</span>
+        </a></li><li>
+        <a class="is-flex" href="#SHELL">
+        <span class="has-mr-6">18</span>
+        <span>SHELL</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="Dockerfile cheat sheet" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

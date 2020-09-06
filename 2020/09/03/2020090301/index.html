@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>gitlab cicd - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gitlab cicd">
+<meta property="og:url" content="http://yoursite.com/2020/09/03/2020090301/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-09-03T10:37:34.742Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gitlab cicd">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/718smiley.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="gitlab cicd" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    gitlab cicd
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-09-03T10:21:50.000Z">2020-09-03</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-09-03T10:21:50.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-09-03</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-09-03T10:37:34.742Z"><i class="far fa-calendar-check">&nbsp;</i>2020-09-03</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/docker/">docker</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 254 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                gitlab cicd
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<h3 id="创建-container-runner"><a href="#创建-container-runner" class="headerlink" title="创建 container runner"></a>创建 container runner</h3><h4 id="dockerfile"><a href="#dockerfile" class="headerlink" title="dockerfile"></a>dockerfile</h4><figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.134.1/containers/ubuntu/.devcontainer/base.Dockerfile</span></span><br><span class="line"><span class="hljs-keyword">ARG</span> VARIANT=<span class="hljs-string">"focal"</span></span><br><span class="line"><span class="hljs-keyword">FROM</span> mcr.microsoft.com/vscode/devcontainers/base:<span class="hljs-number">0</span>-$&#123;VARIANT&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># [Optional] Uncomment this section to install additional OS packages.</span></span><br><span class="line"><span class="hljs-comment"># RUN apt-get update &amp;&amp; export DEBIAN_FRONTEND=noninteractive \</span></span><br><span class="line"><span class="hljs-comment">#     &amp;&amp; apt-get -y install --no-install-recommends &lt;your-package-list-here&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-ci-multi-runner/script.deb.sh | sudo bash</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | sudo apt-get install gitlab-ci-multi-runner</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> <span class="hljs-built_in">printf</span> <span class="hljs-string">'https://gitlab.uuzu.com/\nAMJJgESUzDLumCZgSU5y\nrunner\nrunner\nshell\n'</span> | sudo gitlab-ci-multi-runner register</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> gitlab-ci-multi-runner start</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | apt-get install rsync</span></span><br><span class="line"><span class="hljs-keyword">RUN</span><span class="hljs-bash"> yes | ssh-keygen -t rsa -C <span class="hljs-string">"<span class="hljs-variable">$(whoami)</span>@<span class="hljs-variable">$(hostname)</span>-<span class="hljs-variable">$(date -I)</span>"</span></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Install GitLab Runner</li>
+<li>Specify the following URL during the Runner setup: <a href="https://gitlab.uuzu.com/" target="_blank" rel="noopener">https://gitlab.uuzu.com/</a></li>
+<li>Use the following registration token during setup: AMJJgESUzDLumCZgSU5y</li>
+<li>Start the Runner! <code>gitlab-ci-multi-runner start</code></li>
+<li>查看 runner list <code>sudo gitlab-runner list</code></li>
+</ul>
+<hr>
+<h3 id="gitlab-ci-yml"><a href="#gitlab-ci-yml" class="headerlink" title=".gitlab-ci.yml"></a>.gitlab-ci.yml</h3><figure class="highlight yml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-attr">stages:</span></span><br><span class="line"><span class="hljs-bullet">    -</span> <span class="hljs-string">build_QA</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 测试</span></span><br><span class="line"><span class="hljs-attr">build_QA:</span></span><br><span class="line"><span class="hljs-attr">    script:</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">echo</span> <span class="hljs-string">"hello"</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">rsync</span> <span class="hljs-bullet">-rve</span> <span class="hljs-string">ssh</span> <span class="hljs-string">test.txt</span> <span class="hljs-string">/workspaces/gitlab-runner</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-attr">    stage:</span> <span class="hljs-string">build_QA</span></span><br><span class="line"><span class="hljs-attr">    only:</span></span><br><span class="line"><span class="hljs-bullet">        -</span> <span class="hljs-string">/release/</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="gitlab-项目配置"><a href="#gitlab-项目配置" class="headerlink" title="gitlab 项目配置"></a>gitlab 项目配置</h3><h4 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h4><p>SSH_PRIVATE_KEY：把本机（runner所在机器）的私钥复制过来：~/.ssh/id_rsa</p>
+<p><img src="https://github.com/dalufanjiadan/images/blob/master/WX20200903-182727@2x.png?raw=true" alt="-"></p>
+<h4 id="runner"><a href="#runner" class="headerlink" title="runner"></a>runner</h4><p><img src="https://github.com/dalufanjiadan/images/blob/master/WX20200903-183034@2x.png?raw=true" alt="-"></p>
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/docker/">docker</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/08/31/2020083101/">
+                <span class="level-item">Dockerfile cheat sheet</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#创建-container-runner">
+        <span class="has-mr-6">1</span>
+        <span>创建 container runner</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#dockerfile">
+        <span class="has-mr-6">1.1</span>
+        <span>dockerfile</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#gitlab-ci-yml">
+        <span class="has-mr-6">2</span>
+        <span>.gitlab-ci.yml</span>
+        </a></li><li>
+        <a class="is-flex" href="#gitlab-项目配置">
+        <span class="has-mr-6">3</span>
+        <span>gitlab 项目配置</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Variables">
+        <span class="has-mr-6">3.1</span>
+        <span>Variables</span>
+        </a></li><li>
+        <a class="is-flex" href="#runner">
+        <span class="has-mr-6">3.2</span>
+        <span>runner</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="gitlab cicd" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

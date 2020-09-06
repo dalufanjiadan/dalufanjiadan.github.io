@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>docker cheat sheet - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker cheat sheet">
+<meta property="og:url" content="http://yoursite.com/2020/01/05/20200105/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-08-31T09:32:08.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="docker cheat sheet">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/718smiley.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="docker cheat sheet" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    docker cheat sheet
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-01-05T05:47:22.000Z">2020-01-05</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-01-05T05:47:22.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-01-05</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-08-31T09:32:08.836Z"><i class="far fa-calendar-check">&nbsp;</i>2020-08-31</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/docker/">docker</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    9 minutes read (About 1301 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                docker cheat sheet
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<hr>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>拉取镜像</td>
+<td><code>docker pull [IMAGE]</code></td>
+</tr>
+<tr>
+<td>查看所有镜像</td>
+<td><code>docker images</code></td>
+</tr>
+<tr>
+<td>删除镜像</td>
+<td><code>docker image rm [IMAGE]</code></td>
+</tr>
+<tr>
+<td>删除所有镜像</td>
+<td><code>docker rmi $(docker images -aq)</code></td>
+</tr>
+</tbody></table>
+<h3 id="Docker-Commands-Help-amp-Tips"><a href="#Docker-Commands-Help-amp-Tips" class="headerlink" title="Docker Commands, Help &amp; Tips"></a>Docker Commands, Help &amp; Tips</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Show commands &amp; management commands</td>
+<td><code>docker</code></td>
+</tr>
+<tr>
+<td>Docker version info</td>
+<td><code>docker version</code></td>
+</tr>
+<tr>
+<td>Show info like number of containers, etc</td>
+<td><code>docker info</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="WORKING-WITH-CONTAINERS"><a href="#WORKING-WITH-CONTAINERS" class="headerlink" title="WORKING WITH CONTAINERS"></a>WORKING WITH CONTAINERS</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Create an run a container in foreground</td>
+<td><code>docker container run -it -p 80:80 nginx</code></td>
+</tr>
+<tr>
+<td>Create an run a container in background</td>
+<td><code>docker container run -d -p 80:80 nginx</code></td>
+</tr>
+<tr>
+<td>Naming Containers</td>
+<td><code>docker container run -d -p 80:80 --name nginx-server nginx</code></td>
+</tr>
+<tr>
+<td>List running containers</td>
+<td><code>docker container ls</code> or <code>docker ps</code></td>
+</tr>
+<tr>
+<td>List all containers (Even if not running)</td>
+<td><code>docker container ls -a</code></td>
+</tr>
+<tr>
+<td>Stop container</td>
+<td><code>docker container stop [ID]</code></td>
+</tr>
+<tr>
+<td>Stop all running containers</td>
+<td><code>docker stop $(docker ps -aq)</code></td>
+</tr>
+<tr>
+<td>Remove container (Can not remove running containers, must stop first)</td>
+<td><code>docker container rm [ID]</code></td>
+</tr>
+<tr>
+<td>To remove a running container use force(-f)</td>
+<td><code>docker container rm -f [ID]</code></td>
+</tr>
+<tr>
+<td>Remove multiple containers</td>
+<td><code>docker container rm [ID] [ID] [ID]</code></td>
+</tr>
+<tr>
+<td>Remove all containers</td>
+<td><code>docker rm $(docker ps -aq)</code></td>
+</tr>
+<tr>
+<td>Get logs (Use name or ID)</td>
+<td><code>docker container logs [NAME]</code></td>
+</tr>
+<tr>
+<td>List processes running in container</td>
+<td><code>docker container top [NAME]</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="IMAGE-COMMANDS"><a href="#IMAGE-COMMANDS" class="headerlink" title="IMAGE COMMANDS"></a>IMAGE COMMANDS</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>List the images we have pulled</td>
+<td><code>docker image ls</code></td>
+</tr>
+<tr>
+<td>We can also just pull down images</td>
+<td><code>docker pull [IMAGE]</code></td>
+</tr>
+<tr>
+<td>Remove image</td>
+<td><code>docker image rm [IMAGE]</code></td>
+</tr>
+<tr>
+<td>Remove all images</td>
+<td><code>docker rmi $(docker images -a -q)</code></td>
+</tr>
+</tbody></table>
+<h3 id="Some-sample-container-creation"><a href="#Some-sample-container-creation" class="headerlink" title="Some sample container creation"></a>Some sample container creation</h3><figure class="highlight zsh hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># NGINX</span></span><br><span class="line">$ docker container run -d -p 80:80 --name nginx nginx (-p 80:80 is optional as it runs on 80 by default)</span><br><span class="line"><span class="hljs-comment"># APACHE</span></span><br><span class="line">$ docker container run -d -p 8080:80 --name apache httpd</span><br><span class="line"><span class="hljs-comment"># MONGODB</span></span><br><span class="line">$ docker container run -d -p 27017:27017 --name mongo mongo</span><br><span class="line"><span class="hljs-comment"># MYSQL</span></span><br><span class="line">$ docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="CONTAINER-INFO"><a href="#CONTAINER-INFO" class="headerlink" title="CONTAINER INFO"></a>CONTAINER INFO</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># View info on container</span></span><br><span class="line">$ docker container inspect [NAME]</span><br><span class="line"><span class="hljs-comment"># Specific property (--format)</span></span><br><span class="line">$ docker container inspect --format <span class="hljs-string">'&#123;&#123; .NetworkSettings.IPAddress &#125;&#125;'</span> [NAME]</span><br><span class="line"><span class="hljs-comment"># Performance stats (cpu, mem, network, disk, etc)</span></span><br><span class="line">$ docker container stats [NAME]</span><br></pre></td></tr></table></figure>
+
+<h3 id="ACCESSING-CONTAINERS"><a href="#ACCESSING-CONTAINERS" class="headerlink" title="ACCESSING CONTAINERS"></a>ACCESSING CONTAINERS</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Create new nginx container and bash into</span></span><br><span class="line">$ docker container run -it --name [NAME] nginx bash</span><br><span class="line"><span class="hljs-comment"># For Git Bash, use "winpty"</span></span><br><span class="line">$ winpty docker container run -it --name [NAME] nginx bash</span><br><span class="line"><span class="hljs-comment"># Run/Create Ubuntu container (no bash because ubuntu uses bash by default)</span></span><br><span class="line">$ docker container run -it --name ubuntu ubuntu</span><br><span class="line"><span class="hljs-comment"># You can also make it so when you exit the container does not stay by using the -rm flag</span></span><br><span class="line">$ docker container run --rm -it --name [NAME] ubuntu</span><br><span class="line"><span class="hljs-comment"># Access an already created container, start with -ai</span></span><br><span class="line">$ docker container start -ai ubuntu</span><br><span class="line"><span class="hljs-comment"># Use exec to edit config, etc</span></span><br><span class="line">$ docker container <span class="hljs-built_in">exec</span> -it mysql bash</span><br><span class="line"><span class="hljs-comment"># Alpine is a very small Linux distro good for docker (use sh because it does not include bash) (alpine uses apk for its package manager - can install bash if you want)</span></span><br><span class="line">$ docker container run -it alpine sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>i = interactive Keep STDIN open if not attached</li>
+<li>t = tty - Open prompt</li>
+</ul>
+<h3 id="Limiting-The-Memory-Usage-For-Containers"><a href="#Limiting-The-Memory-Usage-For-Containers" class="headerlink" title="Limiting The Memory Usage For Containers"></a>Limiting The Memory Usage For Containers</h3><p>In order to limit the amount of memory a docker container process can use, simply set the -m [memory amount] flag with the limit.</p>
+<p>To run a container with memory limited to 256 MBs:</p>
+<p>Example: docker run -name [name] -m [Memory (int)][memory unit (b, k, m or g)] -d (to run not to attach) -p (to set access and expose ports) [image ID]</p>
+<ul>
+<li><code>docker run -m 64m -d -p 8082:80 tutum/wordpress</code></li>
+</ul>
+<h3 id="NETWORKING"><a href="#NETWORKING" class="headerlink" title="NETWORKING"></a>NETWORKING</h3><p>“bridge” or “docker0” is the default network</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Get port</td>
+<td>docker container port [NAME]</td>
+</tr>
+<tr>
+<td>List networks</td>
+<td>docker network ls</td>
+</tr>
+<tr>
+<td>Inspect network</td>
+<td>docker network inspect [NETWORK_NAME]</td>
+</tr>
+<tr>
+<td>Create network (“bridge” is default)</td>
+<td>docker network create [NETWORK_NAME] or docker network create –driver bridge [NETWORK_NAME]</td>
+</tr>
+<tr>
+<td>Link to container, add to network</td>
+<td>docker run -d –net=[NETWORK_NAME] –name mongodb mongo</td>
+</tr>
+<tr>
+<td>Create container on network</td>
+<td>docker container run -d –name [NAME] –network [NETWORK_NAME] nginx</td>
+</tr>
+<tr>
+<td>Connect existing container to network</td>
+<td>docker network connect [NETWORK_NAME] [CONTAINER_NAME]</td>
+</tr>
+<tr>
+<td>Disconnect container from network</td>
+<td>docker network disconnect [NETWORK_NAME] [CONTAINER_NAME]</td>
+</tr>
+<tr>
+<td>Detach network from container</td>
+<td>docker network disconnect</td>
+</tr>
+<tr>
+<td>Delete/Remove network</td>
+<td>docker network rm [NETWORK_NAME] [NETWORK_NAME]</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="IMAGE-TAGGING-amp-PUSHING-TO-DOCKERHUB"><a href="#IMAGE-TAGGING-amp-PUSHING-TO-DOCKERHUB" class="headerlink" title="IMAGE TAGGING &amp; PUSHING TO DOCKERHUB"></a>IMAGE TAGGING &amp; PUSHING TO DOCKERHUB</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tags are labels that point ot an image ID</td>
+<td>docker image ls</td>
+</tr>
+<tr>
+<td>Retag existing image</td>
+<td>docker image tag nginx btraversy/nginx</td>
+</tr>
+<tr>
+<td>Upload to dockerhub</td>
+<td>docker image push bradtraversy/nginx</td>
+</tr>
+<tr>
+<td>If denied, do</td>
+<td>docker login</td>
+</tr>
+<tr>
+<td>Add tag to new image</td>
+<td>docker image tag bradtraversy/nginx bradtraversy/nginx:testing</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="DOCKERFILE-PARTS"><a href="#DOCKERFILE-PARTS" class="headerlink" title="DOCKERFILE PARTS"></a>DOCKERFILE PARTS</h3><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FROM</td>
+<td>The os used. Common is alpine, debian, ubuntu</td>
+</tr>
+<tr>
+<td>ENV</td>
+<td>Environment variables</td>
+</tr>
+<tr>
+<td>WORKD</td>
+<td>Sets working directory (also could use ‘RUN cd /some/path’)IR</td>
+</tr>
+<tr>
+<td>COPY</td>
+<td>Copies files from host to container</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>Run commands/shell scripts, etc</td>
+</tr>
+<tr>
+<td>EXPOS</td>
+<td>Ports to exposeE</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td>Final command run when you launch a new container from image</td>
+</tr>
+</tbody></table>
+<p>demo</p>
+<figure class="highlight dockerfile hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">FROM</span> nginx:latest <span class="hljs-comment"># Extends nginx so everything included in that image is included here</span></span><br><span class="line"><span class="hljs-keyword">WORKDIR</span><span class="hljs-bash"> /usr/share/nginx/html</span></span><br><span class="line"><span class="hljs-keyword">COPY</span><span class="hljs-bash"> index.html index.html</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Build image from Dockerfile</span></span><br><span class="line">$ docker image build -t nginx-website</span><br><span class="line"><span class="hljs-comment"># Running it</span></span><br><span class="line">$ docker container run -p 80:80 --rm nginx-website</span><br><span class="line"><span class="hljs-comment"># Tag and push to Dockerhub</span></span><br><span class="line">$ docker image tag nginx-website:latest btraversy/nginx-website:latest</span><br><span class="line">$ docker image push bradtraversy/nginx-website</span><br></pre></td></tr></table></figure>
+
+<h3 id="VOLUMES"><a href="#VOLUMES" class="headerlink" title="VOLUMES"></a>VOLUMES</h3><h3 id="Volume-Makes-special-location-outside-of-container-UFS-Used-for-databases"><a href="#Volume-Makes-special-location-outside-of-container-UFS-Used-for-databases" class="headerlink" title="Volume - Makes special location outside of container UFS. Used for databases"></a>Volume - Makes special location outside of container UFS. Used for databases</h3><h3 id="Bind-Mount-Link-container-path-to-host-path"><a href="#Bind-Mount-Link-container-path-to-host-path" class="headerlink" title="Bind Mount -Link container path to host path"></a>Bind Mount -Link container path to host path</h3><h3 id="Check-volumes"><a href="#Check-volumes" class="headerlink" title="Check volumes"></a>Check volumes</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker volume ls</span><br></pre></td></tr></table></figure>
+
+<h3 id="Cleanup-unused-volumes"><a href="#Cleanup-unused-volumes" class="headerlink" title="Cleanup unused volumes"></a>Cleanup unused volumes</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker volume prune</span><br></pre></td></tr></table></figure>
+
+<h3 id="Pull-down-mysql-image-to-test"><a href="#Pull-down-mysql-image-to-test" class="headerlink" title="Pull down mysql image to test"></a>Pull down mysql image to test</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker pull mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="Inspect-and-see-volume"><a href="#Inspect-and-see-volume" class="headerlink" title="Inspect and see volume"></a>Inspect and see volume</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker image inspect mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="Run-container"><a href="#Run-container" class="headerlink" title="Run container"></a>Run container</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="Inspect-and-see-volume-in-container"><a href="#Inspect-and-see-volume-in-container" class="headerlink" title="Inspect and see volume in container"></a>Inspect and see volume in container</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker container inspect mysql</span><br></pre></td></tr></table></figure>
+
+<h4 id="TIP-Mounts"><a href="#TIP-Mounts" class="headerlink" title="TIP: Mounts"></a>TIP: Mounts</h4><ul>
+<li>You will also see the volume under mounts</li>
+<li>Container gets its own uniqe location on the host to store that data</li>
+<li>Source: xxx is where it lives on the host</li>
+</ul>
+<h3 id="Check-volumes-1"><a href="#Check-volumes-1" class="headerlink" title="Check volumes"></a>Check volumes</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker volume ls</span><br></pre></td></tr></table></figure>
+
+<p><strong>There is no way to tell volumes apart for instance with 2 mysql containers, so we used named volumes</strong></p>
+<h3 id="Named-volumes-Add-v-command-the-name-here-is-mysql-db-which-could-be-anything"><a href="#Named-volumes-Add-v-command-the-name-here-is-mysql-db-which-could-be-anything" class="headerlink" title="Named volumes (Add -v command)(the name here is mysql-db which could be anything)"></a>Named volumes (Add -v command)(the name here is mysql-db which could be anything)</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\$ docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="Inspect-new-named-volume"><a href="#Inspect-new-named-volume" class="headerlink" title="Inspect new named volume"></a>Inspect new named volume</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume inspect mysql-db</span><br></pre></td></tr></table></figure>
+
+<h3 id="BIND-MOUNTS"><a href="#BIND-MOUNTS" class="headerlink" title="BIND MOUNTS"></a>BIND MOUNTS</h3><ul>
+<li>Can not use in Dockerfile, specified at run time (uses -v as well)</li>
+<li>… run -v /Users/brad/stuff:/path/container (mac/linux)</li>
+<li>… run -v //c/Users/brad/stuff:/path/container (windows)</li>
+</ul>
+<p><strong>TIP: Instead of typing out local path, for working directory use $(pwd):/path/container - On windows may not work unless you are in your users folder</strong></p>
+<h3 id="Run-and-be-able-to-edit-index-html-file-local-dir-should-have-the-Dockerfile-and-the-index-html"><a href="#Run-and-be-able-to-edit-index-html-file-local-dir-should-have-the-Dockerfile-and-the-index-html" class="headerlink" title="Run and be able to edit index.html file (local dir should have the Dockerfile and the index.html)"></a>Run and be able to edit index.html file (local dir should have the Dockerfile and the index.html)</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container run  -p 80:80 -v $(pwd):/usr/share/nginx/html nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="Go-into-the-container-and-check"><a href="#Go-into-the-container-and-check" class="headerlink" title="Go into the container and check"></a>Go into the container and check</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container <span class="hljs-built_in">exec</span> -it nginx bash</span><br><span class="line">$ <span class="hljs-built_in">cd</span> /usr/share/nginx/html</span><br><span class="line">$ ls -al</span><br></pre></td></tr></table></figure>
+
+<h3 id="You-could-create-a-file-in-the-container-and-it-will-exiost-on-the-host-as-well"><a href="#You-could-create-a-file-in-the-container-and-it-will-exiost-on-the-host-as-well" class="headerlink" title="You could create a file in the container and it will exiost on the host as well"></a>You could create a file in the container and it will exiost on the host as well</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h3><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d --name my-postgres postgres</span><br></pre></td></tr></table></figure>
+
+<p>now Link it with dot net</p>
+<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 5000:5000 --link my-postgres:postgres btree/dotnet</span><br></pre></td></tr></table></figure>
+
+<h3 id="DOCKER-COMPOSE"><a href="#DOCKER-COMPOSE" class="headerlink" title="DOCKER COMPOSE"></a>DOCKER COMPOSE</h3><ul>
+<li>Configure relationships between containers</li>
+<li>Save our docker container run settings in easy to read file</li>
+<li>2 Parts: YAML File (docker.compose.yml) + CLI tool (docker-compose)</li>
+</ul>
+<h3 id="1-docker-compose-yml-Describes-solutions-for"><a href="#1-docker-compose-yml-Describes-solutions-for" class="headerlink" title="1. docker.compose.yml - Describes solutions for"></a>1. docker.compose.yml - Describes solutions for</h3><ul>
+<li>containers</li>
+<li>networks</li>
+<li>volumes</li>
+</ul>
+<h3 id="2-docker-compose-CLI-used-for-local-dev-test-automation-with-YAML-files"><a href="#2-docker-compose-CLI-used-for-local-dev-test-automation-with-YAML-files" class="headerlink" title="2. docker-compose CLI - used for local dev/test automation with YAML files"></a>2. docker-compose CLI - used for local dev/test automation with YAML files</h3><h3 id="Sample-compose-file-From-Bret-Fishers-course"><a href="#Sample-compose-file-From-Bret-Fishers-course" class="headerlink" title="Sample compose file (From Bret Fishers course)"></a>Sample compose file (From Bret Fishers course)</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">version: &apos;2&apos;</span><br><span class="line"></span><br><span class="line"># same as</span><br><span class="line"># docker run -p 80:4000 -v $(pwd):/site bretfisher/jekyll-serve</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  jekyll:</span><br><span class="line">    image: bretfisher/jekyll-serve</span><br><span class="line">    volumes:</span><br><span class="line">      - .:/site</span><br><span class="line">    ports:</span><br><span class="line">      - &apos;80:4000&apos;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">version: &apos;3&apos;</span><br><span class="line">services:</span><br><span class="line">  app:</span><br><span class="line">    container_name: docker-node-mongo</span><br><span class="line">    restart: always</span><br><span class="line">    build: .</span><br><span class="line">    ports:</span><br><span class="line">      - &apos;80:3000&apos;</span><br><span class="line">    links:</span><br><span class="line">      - mongo</span><br><span class="line">  mongo:</span><br><span class="line">    container_name: mongo</span><br><span class="line">    image: mongo</span><br><span class="line">    ports:</span><br><span class="line">      - &apos;27017:27017&apos;</span><br></pre></td></tr></table></figure>
+
+<h3 id="To-run"><a href="#To-run" class="headerlink" title="To run"></a>To run</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+
+<h3 id="You-can-run-in-background-with"><a href="#You-can-run-in-background-with" class="headerlink" title="You can run in background with"></a>You can run in background with</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+<h3 id="To-cleanup"><a href="#To-cleanup" class="headerlink" title="To cleanup"></a>To cleanup</h3><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure>
+
+<h4 id="this-has-been-taken-from"><a href="#this-has-been-taken-from" class="headerlink" title="this has been taken from"></a><a href="https://gist.github.com/bradtraversy/89fad226dc058a41b596d586022a9bd3" target="_blank" rel="noopener">this has been taken from</a></h4>
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/docker/">docker</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/06/20200106/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">拦截器</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/01/03/20200103/">
+                <span class="level-item">日期处理</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#常用命令">
+        <span class="has-mr-6">1</span>
+        <span>常用命令</span>
+        </a></li><li>
+        <a class="is-flex" href="#Docker-Commands-Help-amp-Tips">
+        <span class="has-mr-6">2</span>
+        <span>Docker Commands, Help &amp; Tips</span>
+        </a></li><li>
+        <a class="is-flex" href="#WORKING-WITH-CONTAINERS">
+        <span class="has-mr-6">3</span>
+        <span>WORKING WITH CONTAINERS</span>
+        </a></li><li>
+        <a class="is-flex" href="#IMAGE-COMMANDS">
+        <span class="has-mr-6">4</span>
+        <span>IMAGE COMMANDS</span>
+        </a></li><li>
+        <a class="is-flex" href="#Some-sample-container-creation">
+        <span class="has-mr-6">5</span>
+        <span>Some sample container creation</span>
+        </a></li><li>
+        <a class="is-flex" href="#CONTAINER-INFO">
+        <span class="has-mr-6">6</span>
+        <span>CONTAINER INFO</span>
+        </a></li><li>
+        <a class="is-flex" href="#ACCESSING-CONTAINERS">
+        <span class="has-mr-6">7</span>
+        <span>ACCESSING CONTAINERS</span>
+        </a></li><li>
+        <a class="is-flex" href="#Limiting-The-Memory-Usage-For-Containers">
+        <span class="has-mr-6">8</span>
+        <span>Limiting The Memory Usage For Containers</span>
+        </a></li><li>
+        <a class="is-flex" href="#NETWORKING">
+        <span class="has-mr-6">9</span>
+        <span>NETWORKING</span>
+        </a></li><li>
+        <a class="is-flex" href="#IMAGE-TAGGING-amp-PUSHING-TO-DOCKERHUB">
+        <span class="has-mr-6">10</span>
+        <span>IMAGE TAGGING &amp; PUSHING TO DOCKERHUB</span>
+        </a></li><li>
+        <a class="is-flex" href="#DOCKERFILE-PARTS">
+        <span class="has-mr-6">11</span>
+        <span>DOCKERFILE PARTS</span>
+        </a></li><li>
+        <a class="is-flex" href="#VOLUMES">
+        <span class="has-mr-6">12</span>
+        <span>VOLUMES</span>
+        </a></li><li>
+        <a class="is-flex" href="#Volume-Makes-special-location-outside-of-container-UFS-Used-for-databases">
+        <span class="has-mr-6">13</span>
+        <span>Volume - Makes special location outside of container UFS. Used for databases</span>
+        </a></li><li>
+        <a class="is-flex" href="#Bind-Mount-Link-container-path-to-host-path">
+        <span class="has-mr-6">14</span>
+        <span>Bind Mount -Link container path to host path</span>
+        </a></li><li>
+        <a class="is-flex" href="#Check-volumes">
+        <span class="has-mr-6">15</span>
+        <span>Check volumes</span>
+        </a></li><li>
+        <a class="is-flex" href="#Cleanup-unused-volumes">
+        <span class="has-mr-6">16</span>
+        <span>Cleanup unused volumes</span>
+        </a></li><li>
+        <a class="is-flex" href="#Pull-down-mysql-image-to-test">
+        <span class="has-mr-6">17</span>
+        <span>Pull down mysql image to test</span>
+        </a></li><li>
+        <a class="is-flex" href="#Inspect-and-see-volume">
+        <span class="has-mr-6">18</span>
+        <span>Inspect and see volume</span>
+        </a></li><li>
+        <a class="is-flex" href="#Run-container">
+        <span class="has-mr-6">19</span>
+        <span>Run container</span>
+        </a></li><li>
+        <a class="is-flex" href="#Inspect-and-see-volume-in-container">
+        <span class="has-mr-6">20</span>
+        <span>Inspect and see volume in container</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#TIP-Mounts">
+        <span class="has-mr-6">20.1</span>
+        <span>TIP: Mounts</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Check-volumes-1">
+        <span class="has-mr-6">21</span>
+        <span>Check volumes</span>
+        </a></li><li>
+        <a class="is-flex" href="#Named-volumes-Add-v-command-the-name-here-is-mysql-db-which-could-be-anything">
+        <span class="has-mr-6">22</span>
+        <span>Named volumes (Add -v command)(the name here is mysql-db which could be anything)</span>
+        </a></li><li>
+        <a class="is-flex" href="#Inspect-new-named-volume">
+        <span class="has-mr-6">23</span>
+        <span>Inspect new named volume</span>
+        </a></li><li>
+        <a class="is-flex" href="#BIND-MOUNTS">
+        <span class="has-mr-6">24</span>
+        <span>BIND MOUNTS</span>
+        </a></li><li>
+        <a class="is-flex" href="#Run-and-be-able-to-edit-index-html-file-local-dir-should-have-the-Dockerfile-and-the-index-html">
+        <span class="has-mr-6">25</span>
+        <span>Run and be able to edit index.html file (local dir should have the Dockerfile and the index.html)</span>
+        </a></li><li>
+        <a class="is-flex" href="#Go-into-the-container-and-check">
+        <span class="has-mr-6">26</span>
+        <span>Go into the container and check</span>
+        </a></li><li>
+        <a class="is-flex" href="#You-could-create-a-file-in-the-container-and-it-will-exiost-on-the-host-as-well">
+        <span class="has-mr-6">27</span>
+        <span>You could create a file in the container and it will exiost on the host as well</span>
+        </a></li><li>
+        <a class="is-flex" href="#Link">
+        <span class="has-mr-6">28</span>
+        <span>Link</span>
+        </a></li><li>
+        <a class="is-flex" href="#DOCKER-COMPOSE">
+        <span class="has-mr-6">29</span>
+        <span>DOCKER COMPOSE</span>
+        </a></li><li>
+        <a class="is-flex" href="#1-docker-compose-yml-Describes-solutions-for">
+        <span class="has-mr-6">30</span>
+        <span>1. docker.compose.yml - Describes solutions for</span>
+        </a></li><li>
+        <a class="is-flex" href="#2-docker-compose-CLI-used-for-local-dev-test-automation-with-YAML-files">
+        <span class="has-mr-6">31</span>
+        <span>2. docker-compose CLI - used for local dev/test automation with YAML files</span>
+        </a></li><li>
+        <a class="is-flex" href="#Sample-compose-file-From-Bret-Fishers-course">
+        <span class="has-mr-6">32</span>
+        <span>Sample compose file (From Bret Fishers course)</span>
+        </a></li><li>
+        <a class="is-flex" href="#Example-2">
+        <span class="has-mr-6">33</span>
+        <span>Example 2</span>
+        </a></li><li>
+        <a class="is-flex" href="#To-run">
+        <span class="has-mr-6">34</span>
+        <span>To run</span>
+        </a></li><li>
+        <a class="is-flex" href="#You-can-run-in-background-with">
+        <span class="has-mr-6">35</span>
+        <span>You can run in background with</span>
+        </a></li><li>
+        <a class="is-flex" href="#To-cleanup">
+        <span class="has-mr-6">36</span>
+        <span>To cleanup</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#this-has-been-taken-from">
+        <span class="has-mr-6">36.1</span>
+        <span>this has been taken from</span>
+        </a></li></ul></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="docker cheat sheet" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>日期处理 - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="java,date">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日期处理">
+<meta property="og:url" content="http://yoursite.com/2020/01/03/20200103/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-05-20T09:15:54.113Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="日期处理">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/718smiley.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="日期处理" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    日期处理
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-01-03T03:21:27.000Z">2020-01-03</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-01-03T03:21:27.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-01-03</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-20T09:15:54.113Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-20</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/java/">java</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1061 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                日期处理
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<hr>
+<h3 id="LocalDate-amp-LocalTime-amp-LocalDateTime"><a href="#LocalDate-amp-LocalTime-amp-LocalDateTime" class="headerlink" title="LocalDate &amp; LocalTime &amp; LocalDateTime"></a>LocalDate &amp; LocalTime &amp; LocalDateTime</h3><h4 id="创建实例"><a href="#创建实例" class="headerlink" title="创建实例"></a>创建实例</h4><ul>
+<li><code>of</code></li>
+<li><code>from</code></li>
+<li><code>now</code></li>
+<li><code>parse</code></li>
+</ul>
+<p>实例都是不可变对象。</p>
+<h4 id="读取值"><a href="#读取值" class="headerlink" title="读取值"></a>读取值</h4><ul>
+<li><code>getXXX</code></li>
+<li><code>get(TemporalField)</code></li>
+</ul>
+<h4 id="合并日期和时间"><a href="#合并日期和时间" class="headerlink" title="合并日期和时间"></a>合并日期和时间</h4><ul>
+<li><code>LocalDateTime.of</code></li>
+<li><code>date.atTime</code></li>
+<li><code>time.atDate</code></li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>&#123;</span><br><span class="line">    LocalDate ld = LocalDate.of(<span class="hljs-number">2020</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>);</span><br><span class="line">    LocalDate ldNow = LocalDate.now();</span><br><span class="line">    LocalDate ld2 = LocalDate.from(ld);</span><br><span class="line">    LocalTime lt = LocalTime.parse(<span class="hljs-string">"12:20:30"</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(ld);</span><br><span class="line">    System.out.println(ldNow);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">int</span> year = ldNow.getYear();</span><br><span class="line">    <span class="hljs-keyword">int</span> month = ldNow.get(ChronoField.MONTH_OF_YEAR);</span><br><span class="line">    <span class="hljs-keyword">int</span> day = ldNow.get(ChronoField.DAY_OF_MONTH);</span><br><span class="line">    <span class="hljs-keyword">int</span> hour = lt.getHour();</span><br><span class="line">    <span class="hljs-keyword">int</span> minute = lt.get(ChronoField.MINUTE_OF_HOUR);</span><br><span class="line"></span><br><span class="line">    System.out.println(year + <span class="hljs-string">"-"</span> + month + <span class="hljs-string">"-"</span> + day + <span class="hljs-string">" "</span> + hour + <span class="hljs-string">":"</span> + minute);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 2020-01-02</span></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03</span></span><br><span class="line">    <span class="hljs-comment">// 2020:1:3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    LocalDate date = LocalDate.now();</span><br><span class="line">    LocalTime time = LocalTime.now();</span><br><span class="line"></span><br><span class="line">    LocalDateTime ldt = LocalDateTime.of(<span class="hljs-number">2020</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">11</span>, <span class="hljs-number">54</span>, <span class="hljs-number">20</span>);</span><br><span class="line">    LocalDateTime ldt2 = LocalDateTime.of(date, time);</span><br><span class="line">    LocalDateTime ldt3 = date.atTime(time);</span><br><span class="line">    LocalDateTime ldt4 = time.atDate(date);</span><br><span class="line"></span><br><span class="line">    LocalDate date2 = ldt.toLocalDate();</span><br><span class="line">    LocalTime time2 = ldt.toLocalTime();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    System.out.println(ldt);</span><br><span class="line">    System.out.println(ldt2);</span><br><span class="line">    System.out.println(ldt3);</span><br><span class="line">    System.out.println(ldt4);</span><br><span class="line"></span><br><span class="line">    System.out.println(date2);</span><br><span class="line">    System.out.println(time2);</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03T11:54:20</span></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03T11:58:00.987</span></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03T11:58:00.987</span></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03T11:58:00.987</span></span><br><span class="line">    <span class="hljs-comment">// 2020-01-03</span></span><br><span class="line">    <span class="hljs-comment">// 11:54:20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Instant"><a href="#Instant" class="headerlink" title="Instant"></a>Instant</h3><p>以 Unix 元年时间（UTC 时区 1970 年 1 月 1 日午夜时分）到现在的秒数。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Instant instant = Instant.now();</span><br><span class="line"><span class="hljs-keyword">long</span> timeInSeconds = instant.getEpochSecond();</span><br><span class="line">Instant instant2 = Instant.ofEpochSecond(timeInSeconds);</span><br><span class="line">Instant instant3 = instant2.plus(<span class="hljs-number">10</span>, ChronoUnit.SECONDS);</span><br><span class="line"></span><br><span class="line">System.out.println(instant);</span><br><span class="line">System.out.println(timeInSeconds);</span><br><span class="line">System.out.println(instant2);</span><br><span class="line">System.out.println(instant3);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T06:45:00.782Z</span></span><br><span class="line"><span class="hljs-comment">// 1578033900</span></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T06:45:00Z</span></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T06:45:10Z</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Duration-amp-Period"><a href="#Duration-amp-Period" class="headerlink" title="Duration &amp; Period"></a>Duration &amp; Period</h3><p>以上所有的类都实现了<code>Temporal</code>接口，Temporal 接口定义了如何读取和操纵为时间建模的对象的值。Duration、Period 描述了两个 Temporal 对象之间的时间间隔。Duraion 主要用于以秒和纳秒衡量时间的长短。需要以年、月或者日的方式对时间单位建模则可使用 Period。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld1 = LocalDate.of(<span class="hljs-number">2020</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);</span><br><span class="line">LocalDate ld2 = LocalDate.of(<span class="hljs-number">2020</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>);</span><br><span class="line"></span><br><span class="line">Period period = Period.between(ld1, ld2);</span><br><span class="line"><span class="hljs-keyword">int</span> days = period.getDays();</span><br><span class="line"></span><br><span class="line">System.out.println(ld1);</span><br><span class="line">System.out.println(ld2);</span><br><span class="line">System.out.println(period);</span><br><span class="line">System.out.println(days);</span><br><span class="line"></span><br><span class="line">period = period.plusDays(<span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">LocalDate ld3 = ld2.plus(period);</span><br><span class="line">System.out.println(ld3);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 2020-01-03</span></span><br><span class="line"><span class="hljs-comment">// 2020-05-04</span></span><br><span class="line"><span class="hljs-comment">// P4M1D</span></span><br><span class="line"><span class="hljs-comment">// 1</span></span><br><span class="line"><span class="hljs-comment">// 2020-09-15</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime ldt1 = LocalDateTime.now();</span><br><span class="line">LocalDateTime ldt2 = ldt1.plusHours(<span class="hljs-number">1</span>);</span><br><span class="line"></span><br><span class="line">Duration duration = Duration.between(ldt1, ldt2);</span><br><span class="line">duration = duration.plusHours(<span class="hljs-number">1</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(ldt1);</span><br><span class="line">System.out.println(ldt2);</span><br><span class="line">LocalDateTime ldt3 = ldt2.plus(duration);</span><br><span class="line"></span><br><span class="line">System.out.println(duration);</span><br><span class="line">System.out.println(ldt3);</span><br><span class="line"></span><br><span class="line">Instant instant1 = Instant.now();</span><br><span class="line">Instant instant2 = instant1.plusSeconds(<span class="hljs-number">10</span>);</span><br><span class="line"></span><br><span class="line">Duration duration2 = Duration.between(instant1, instant2);</span><br><span class="line"></span><br><span class="line">System.out.println(duration2);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T15:24:39.551</span></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T16:24:39.551</span></span><br><span class="line"><span class="hljs-comment">// PT2H</span></span><br><span class="line"><span class="hljs-comment">// 2020-01-03T18:24:39.551</span></span><br><span class="line"><span class="hljs-comment">// PT10S</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="修改日期"><a href="#修改日期" class="headerlink" title="修改日期"></a>修改日期</h3><h4 id="withAttribute"><a href="#withAttribute" class="headerlink" title="withAttribute"></a>withAttribute</h4><p>withAttribute 会创建对象的一个副本。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld = LocalDate.now();</span><br><span class="line">System.out.println(ld);</span><br><span class="line"></span><br><span class="line">LocalDate ld2 = ld.withYear(<span class="hljs-number">2021</span>);</span><br><span class="line">LocalDate ld3 = ld.with(ChronoField.MONTH_OF_YEAR, <span class="hljs-number">6</span>);</span><br><span class="line"></span><br><span class="line">System.out.println(ld2);</span><br><span class="line">System.out.println(ld3);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 2020-01-03</span></span><br><span class="line"><span class="hljs-comment">// 2021-01-03</span></span><br><span class="line"><span class="hljs-comment">// 2020-06-03</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="plus-minus"><a href="#plus-minus" class="headerlink" title="plus minus"></a>plus minus</h4><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld1 = LocalDate.now();</span><br><span class="line">Period period = Period.ofDays(<span class="hljs-number">10</span>);</span><br><span class="line">LocalDate ld2 = ld1.plus(period);</span><br><span class="line"></span><br><span class="line">System.out.println(ld1);</span><br><span class="line">System.out.println(period);</span><br><span class="line">System.out.println(ld2);</span><br></pre></td></tr></table></figure>
+
+<h4 id="TemporalAdjuster"><a href="#TemporalAdjuster" class="headerlink" title="TemporalAdjuster"></a>TemporalAdjuster</h4><p>上面两种对日期的操作是比较直接的方式。如需要复杂操作，比如将日期调整到下个周日、或者本月最后一天，建议使用<code>TemporalAdjusters</code>，已经提供了许多常用的预定义的 TemporalAdjuster。当然，可以实现 TemporanAdjuster 接口自定义日期操作。</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld1 = LocalDate.now();</span><br><span class="line"></span><br><span class="line">System.out.println(ld1.with(TemporalAdjusters.firstDayOfMonth()));</span><br><span class="line"><span class="hljs-comment">// 这个日期的当前月的第二个星期一的日期</span></span><br><span class="line">System.out.println(ld1.with(TemporalAdjusters.dayOfWeekInMonth(<span class="hljs-number">2</span>, DayOfWeek.MONDAY)));</span><br><span class="line">System.out.println(ld1.with(TemporalAdjusters.next(DayOfWeek.FRIDAY)));</span><br><span class="line">System.out.println(ld1.with(TemporalAdjusters.nextOrSame(DayOfWeek.FRIDAY)));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> java.time.DayOfWeek;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.Duration;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.Instant;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.LocalDate;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.Period;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.TemporalUnit;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.ChronoField;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.ChronoUnit;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.Temporal;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.TemporalAdjuster;</span><br><span class="line"><span class="hljs-keyword">import</span> java.time.temporal.TemporalAdjusters;</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NextWorkingDay</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">TemporalAdjuster</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Temporal <span class="hljs-title">adjustInto</span><span class="hljs-params">(Temporal temporal)</span> </span>&#123;</span><br><span class="line">        DayOfWeek dow = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">int</span> dayToAdd = <span class="hljs-number">1</span>;</span><br><span class="line">        <span class="hljs-keyword">if</span> (dow == DayOfWeek.FRIDAY) &#123;</span><br><span class="line">            dayToAdd = <span class="hljs-number">3</span>;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (dow == DayOfWeek.SATURDAY) &#123;</span><br><span class="line">            dayToAdd = <span class="hljs-number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">return</span> temporal.plus(dayToAdd, ChronoUnit.DAYS);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        LocalDate ld1 = LocalDate.now();</span><br><span class="line"></span><br><span class="line">        System.out.println(ld1.with(<span class="hljs-keyword">new</span> NextWorkingDay()));</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">// 也可以使用lambda</span></span><br><span class="line">        LocalDate ld2 = ld1.with(temporal -&gt; &#123;</span><br><span class="line">            DayOfWeek dow = DayOfWeek.of(temporal.get(ChronoField.DAY_OF_WEEK));</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">int</span> dayToAdd = <span class="hljs-number">1</span>;</span><br><span class="line">            <span class="hljs-keyword">if</span> (dow == DayOfWeek.FRIDAY) &#123;</span><br><span class="line">                dayToAdd = <span class="hljs-number">3</span>;</span><br><span class="line">            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (dow == DayOfWeek.SATURDAY) &#123;</span><br><span class="line">                dayToAdd = <span class="hljs-number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="hljs-keyword">return</span> temporal.plus(dayToAdd, ChronoUnit.DAYS);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        System.out.println(ld2);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="打印解析日期"><a href="#打印解析日期" class="headerlink" title="打印解析日期"></a>打印解析日期</h3><ul>
+<li><code>DateTimeFormatter</code></li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld = LocalDate.now();</span><br><span class="line">String s1 = ld.format(ISO_DATE);</span><br><span class="line">String s2 = ld.format(BASIC_ISO_DATE);</span><br><span class="line"></span><br><span class="line">System.out.println(ld);</span><br><span class="line">System.out.println(s1);</span><br><span class="line">System.out.println(s2);</span><br><span class="line"></span><br><span class="line">LocalDate date1 = LocalDate.parse(<span class="hljs-string">"20191221"</span>, DateTimeFormatter.BASIC_ISO_DATE);</span><br><span class="line">LocalDate date2 = LocalDate.parse(<span class="hljs-string">"2020-12-21"</span>, DateTimeFormatter.ISO_DATE);</span><br><span class="line"></span><br><span class="line">System.out.println(date1);</span><br><span class="line">System.out.println(date2);</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// 自定义格式器</span></span><br><span class="line">DateTimeFormatter formatter = DateTimeFormatter.ofPattern(<span class="hljs-string">"dd/MM/yyyy"</span>);</span><br><span class="line">String s3 = ld.format(formatter);</span><br><span class="line"></span><br><span class="line">System.out.println(s3);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="时区-ZoneId"><a href="#时区-ZoneId" class="headerlink" title="时区 ZoneId"></a>时区 ZoneId</h3><p>时区是按照一定的规则将区域划分成标准时间相同的区间。<br>表达时区两种方法。</p>
+<ul>
+<li><code>ZoneId.of(&quot;Asia/Shanghai&quot;)</code></li>
+<li>利用当前时区和 UTC/格林尼治的固定偏差<code>ZoneOffset.of(&quot;-05:00&quot;)</code></li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">LocalDate ld = LocalDate.now();</span><br><span class="line">ZoneId shanghaiZone = ZoneId.of(<span class="hljs-string">"Asia/Shanghai"</span>);</span><br><span class="line">ZonedDateTime zdt = ld.atStartOfDay(shanghaiZone);</span><br><span class="line"></span><br><span class="line">System.out.println(ld);</span><br><span class="line">System.out.println(shanghaiZone);</span><br><span class="line">System.out.println(zdt);</span><br><span class="line"></span><br><span class="line">LocalDateTime ldt = LocalDateTime.now();</span><br><span class="line">ZonedDateTime zdt1 = ldt.atZone(shanghaiZone);</span><br><span class="line"></span><br><span class="line">System.out.println(ldt);</span><br><span class="line">System.out.println(zdt1);</span><br><span class="line"></span><br><span class="line">Instant instant = Instant.now();</span><br><span class="line">ZonedDateTime zdt2 = instant.atZone(shanghaiZone);</span><br><span class="line">System.out.println(zdt2);</span><br><span class="line"></span><br><span class="line">ZoneId zoneId = ZoneOffset.of(<span class="hljs-string">"+08:00"</span>);</span><br><span class="line">ZonedDateTime zdt3 = instant.atZone(zoneId);</span><br><span class="line">System.out.println(zdt3);</span><br></pre></td></tr></table></figure>
+
+<hr>
+
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/date/">date</a>,&nbsp;<a class="has-link-grey -link" href="/tags/java/">java</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/01/05/20200105/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">docker cheat sheet</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/30/2019-12-30-1/">
+                <span class="level-item">double to long</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#LocalDate-amp-LocalTime-amp-LocalDateTime">
+        <span class="has-mr-6">1</span>
+        <span>LocalDate &amp; LocalTime &amp; LocalDateTime</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#创建实例">
+        <span class="has-mr-6">1.1</span>
+        <span>创建实例</span>
+        </a></li><li>
+        <a class="is-flex" href="#读取值">
+        <span class="has-mr-6">1.2</span>
+        <span>读取值</span>
+        </a></li><li>
+        <a class="is-flex" href="#合并日期和时间">
+        <span class="has-mr-6">1.3</span>
+        <span>合并日期和时间</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Instant">
+        <span class="has-mr-6">2</span>
+        <span>Instant</span>
+        </a></li><li>
+        <a class="is-flex" href="#Duration-amp-Period">
+        <span class="has-mr-6">3</span>
+        <span>Duration &amp; Period</span>
+        </a></li><li>
+        <a class="is-flex" href="#修改日期">
+        <span class="has-mr-6">4</span>
+        <span>修改日期</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#withAttribute">
+        <span class="has-mr-6">4.1</span>
+        <span>withAttribute</span>
+        </a></li><li>
+        <a class="is-flex" href="#plus-minus">
+        <span class="has-mr-6">4.2</span>
+        <span>plus minus</span>
+        </a></li><li>
+        <a class="is-flex" href="#TemporalAdjuster">
+        <span class="has-mr-6">4.3</span>
+        <span>TemporalAdjuster</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#打印解析日期">
+        <span class="has-mr-6">5</span>
+        <span>打印解析日期</span>
+        </a></li><li>
+        <a class="is-flex" href="#时区-ZoneId">
+        <span class="has-mr-6">6</span>
+        <span>时区 ZoneId</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="日期处理" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
