@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 3.9.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>spring validation - Hexo</title>
+
+
+    <meta name="description" content="-">
+<meta name="keywords" content="spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring validation">
+<meta property="og:url" content="http://yoursite.com/2020/09/22/2020092201/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="-">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="og:updated_time" content="2020-09-23T03:36:28.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="spring validation">
+<meta name="twitter:description" content="-">
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/718smiley.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<!-- <body class="is-2-column"> -->
+        <body class="is-3-column">
+    <nav class="navbar navbar-main is-sticky-nav">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/dog.png" alt="spring validation" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
+                    <i class="fas fa-list-ul"></i>
+                </a>
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                
+                    <!-- <i class="fas fa-angle-double-right"></i> -->
+                    spring validation
+                
+            </h1>
+               
+               <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                   <div class="level-left">
+                    <!-- <time class="level-item has-text-grey" datetime="2020-09-22T10:50:55.000Z">2020-09-22</time> -->
+                    <time class="level-item has-text-grey" datetime="2020-09-22T10:50:55.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-09-22</time>
+                    
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-09-23T03:36:28.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-09-23</time>
+                    
+                        
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/spring/">spring</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1033 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <!-- <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                spring validation
+            
+        </h1> -->
+        <div class="content">
+            <p>-</p>
+<a id="more"></a>
+
+<hr>
+<h3 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h3><h4 id="spring-boot"><a href="#spring-boot" class="headerlink" title="spring boot"></a>spring boot</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="spring-mvc"><a href="#spring-mvc" class="headerlink" title="spring mvc"></a>spring mvc</h4><figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.hibernate.validator<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>hibernate-validator<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>6.0.17.Final<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="JSR303-JSR-349-hibernate-validation-spring-validation-注解"><a href="#JSR303-JSR-349-hibernate-validation-spring-validation-注解" class="headerlink" title="JSR303/JSR-349 hibernate validation spring validation 注解"></a>JSR303/JSR-349 hibernate validation spring validation 注解</h3><h4 id="jsr-注解"><a href="#jsr-注解" class="headerlink" title="jsr 注解"></a>jsr 注解</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@Null</td>
+<td>被注释的元素必须为 null</td>
+</tr>
+<tr>
+<td>@NotNull</td>
+<td>被注释的元素必须不为 null</td>
+</tr>
+<tr>
+<td>@AssertTrue</td>
+<td>被注释的元素必须为 true</td>
+</tr>
+<tr>
+<td>@AssertFalse</td>
+<td>被注释的元素必须为 false</td>
+</tr>
+<tr>
+<td>@Min(value)</td>
+<td>被注释的元素必须是一个数字，其值必须大于等于指定的最小值</td>
+</tr>
+<tr>
+<td>@Max(value)</td>
+<td>被注释的元素必须是一个数字，其值必须小于等于指定的最大值</td>
+</tr>
+<tr>
+<td>@DecimalMin(value)</td>
+<td>被注释的元素必须是一个数字，其值必须大于等于指定的最小值</td>
+</tr>
+<tr>
+<td>@DecimalMax(value)</td>
+<td>被注释的元素必须是一个数字，其值必须小于等于指定的最大值</td>
+</tr>
+<tr>
+<td>@Size(max=, min=)</td>
+<td>被注释的元素的大小必须在指定的范围内</td>
+</tr>
+<tr>
+<td>@Digits (integer, fraction)</td>
+<td>被注释的元素必须是一个数字，其值必须在可接受的范围内</td>
+</tr>
+<tr>
+<td>@Past</td>
+<td>被注释的元素必须是一个过去的日期</td>
+</tr>
+<tr>
+<td>@Future</td>
+<td>被注释的元素必须是一个将来的日期</td>
+</tr>
+<tr>
+<td>@Pattern(regex=,flag=)</td>
+<td>被注释的元素必须符合指定的正则表达式</td>
+</tr>
+</tbody></table>
+<h4 id="hibernate-validation-注解"><a href="#hibernate-validation-注解" class="headerlink" title="hibernate validation 注解"></a>hibernate validation 注解</h4><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@NotBlank(message =)</td>
+<td>验证字符串非 null，且长度必须大于 0</td>
+</tr>
+<tr>
+<td>@Email</td>
+<td>被注释的元素必须是电子邮箱地址</td>
+</tr>
+<tr>
+<td>@Length(min=,max=)</td>
+<td>被注释的字符串的大小必须在指定的范围内</td>
+</tr>
+<tr>
+<td>@NotEmpty</td>
+<td>被注释的字符串的必须非空</td>
+</tr>
+<tr>
+<td>@Range(min=,max=,message=)</td>
+<td>被注释的元素必须在合适的范围内</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><h4 id="分组校验"><a href="#分组校验" class="headerlink" title="分组校验"></a>分组校验</h4><ul>
+<li>默认会采用 Default 分组。如果想要不标记分组的时候，也会去验证 Default 分组，可以去继承默认分组</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">AddGroup</span>  <span class="hljs-keyword">extends</span> <span class="hljs-title">Default</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">// ----</span></span><br><span class="line"><span class="hljs-meta">@Data</span></span><br><span class="line"><span class="hljs-meta">@AllArgsConstructor</span></span><br><span class="line"><span class="hljs-meta">@NoArgsConstructor</span></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UserRequest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@Null</span>(groups = AddGroup.class)</span><br><span class="line">	<span class="hljs-meta">@NotBlank</span>(groups = UpdateGroup.class)</span><br><span class="line">	String id;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">"用户名不能为空"</span>)</span><br><span class="line">	String username;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@NotBlank</span>(message = <span class="hljs-string">"密码不能为空"</span>)</span><br><span class="line">	String password;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@Email</span></span><br><span class="line">	<span class="hljs-meta">@NotNull</span></span><br><span class="line">	String email;</span><br><span class="line"></span><br><span class="line">	String phone;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// ----</span></span><br><span class="line"><span class="hljs-meta">@PostMapping</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">createUser</span><span class="hljs-params">(@RequestBody @Validated(&#123; AddGroup.class &#125;)</span> UserRequest user) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@PutMapping</span>(<span class="hljs-string">"/&#123;userId&#125;"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">updateUser</span><span class="hljs-params">(@RequestBody @Validated(&#123; UpdateGroup.class &#125;)</span> UserRequest user) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h4><ul>
+<li>自定义校验注解</li>
+<li>编写真正的校验者类</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Documented</span></span><br><span class="line"><span class="hljs-meta">@Target</span>(&#123; METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE &#125;)</span><br><span class="line"><span class="hljs-meta">@Constraint</span>(validatedBy = &#123; MobileValidator.class &#125;)</span><br><span class="line"><span class="hljs-meta">@Retention</span>(RetentionPolicy.RUNTIME)</span><br><span class="line"><span class="hljs-meta">@Repeatable</span>(Mobile.List.class)</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> Mobile &#123;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">     * 错误提示信息，可以写死,也可以填写国际化的key</span></span><br><span class="line"><span class="hljs-comment">     */</span></span><br><span class="line">    <span class="hljs-function">String <span class="hljs-title">message</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> "手机号码不正确"</span>;</span><br><span class="line"></span><br><span class="line">    Class&lt;?&gt;[] groups() <span class="hljs-keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    Class&lt;? extends Payload&gt;[] payload() <span class="hljs-keyword">default</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function">String <span class="hljs-title">regexp</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> "^1<span class="hljs-params">([<span class="hljs-number">38</span>][<span class="hljs-number">0</span><span class="hljs-number">-9</span>]|<span class="hljs-number">4</span>[<span class="hljs-number">579</span>]|<span class="hljs-number">5</span>[<span class="hljs-number">0</span><span class="hljs-number">-3</span>,<span class="hljs-number">5</span><span class="hljs-number">-9</span>]|<span class="hljs-number">6</span>[<span class="hljs-number">6</span>]|<span class="hljs-number">7</span>[<span class="hljs-number">0135678</span>]|<span class="hljs-number">9</span>[<span class="hljs-number">89</span>])</span>\\d</span>&#123;<span class="hljs-number">8</span>&#125;$<span class="hljs-string">";</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">    @Target(&#123; METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE &#125;)</span></span><br><span class="line"><span class="hljs-string">    @Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="hljs-string">    @Documented</span></span><br><span class="line"><span class="hljs-string">    @interface List &#123;</span></span><br><span class="line"><span class="hljs-string">        Mobile[] value();</span></span><br><span class="line"><span class="hljs-string">    &#125;</span></span><br><span class="line"><span class="hljs-string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MobileValidator</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ConstraintValidator</span>&lt;<span class="hljs-title">Mobile</span>, <span class="hljs-title">String</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment">	 * 手机验证规则</span></span><br><span class="line"><span class="hljs-comment">	 */</span></span><br><span class="line">	<span class="hljs-keyword">private</span> Pattern pattern;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@Override</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">initialize</span><span class="hljs-params">(Mobile mobile)</span> </span>&#123;</span><br><span class="line">		pattern = Pattern.compile(mobile.regexp());</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-meta">@Override</span></span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isValid</span><span class="hljs-params">(String value, ConstraintValidatorContext context)</span> </span>&#123;</span><br><span class="line">		<span class="hljs-keyword">if</span> (value == <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">			<span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="hljs-keyword">return</span> pattern.matcher(value).matches();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="接口参数验证"><a href="#接口参数验证" class="headerlink" title="接口参数验证"></a>接口参数验证</h3><ul>
+<li>表单绑定到 java bean</li>
+<li>将请求体解析并绑定到 java bean</li>
+<li>普通参数(非 java bean)校验</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/hello1"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">hello</span><span class="hljs-params">(@Validated UserRequest user)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="hljs-string">"test"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">"/hello2"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">hello2</span><span class="hljs-params">(@RequestBody @Validated(&#123; UpdateGroup.class &#125;)</span> UserRequest user) </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/hello3"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello3</span><span class="hljs-params">(@NotBlank String username, @NotBlank String password)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> username;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="验证异常处理"><a href="#验证异常处理" class="headerlink" title="验证异常处理"></a>验证异常处理</h3><figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * 表单绑定到 java bean 出错时抛出 BindException 异常</span></span><br><span class="line"><span class="hljs-comment"> *</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> e</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-meta">@ExceptionHandler</span>(&#123; BindException.class &#125;)</span><br><span class="line"><span class="hljs-meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">protected</span> Object <span class="hljs-title">handleBindException</span><span class="hljs-params">(BindException e)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-comment">// log.error("参数绑定失败", e);</span></span><br><span class="line">	List&lt;Map&lt;String, String&gt;&gt; errors = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	<span class="hljs-keyword">for</span> (ObjectError objectError : e.getAllErrors()) &#123;</span><br><span class="line">		Map&lt;String, String&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		<span class="hljs-keyword">if</span> (objectError <span class="hljs-keyword">instanceof</span> FieldError) &#123;</span><br><span class="line">			FieldError fieldError = (FieldError) objectError;</span><br><span class="line">			map.put(<span class="hljs-string">"field"</span>, fieldError.getField());</span><br><span class="line">			map.put(<span class="hljs-string">"message"</span>, fieldError.getDefaultMessage());</span><br><span class="line">		&#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">			map.put(<span class="hljs-string">"field"</span>, objectError.getObjectName());</span><br><span class="line">			map.put(<span class="hljs-string">"message"</span>, objectError.getDefaultMessage());</span><br><span class="line">		&#125;</span><br><span class="line">		errors.add(map);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.validationException(errors);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * 将请求体解析并绑定到 java bean 时，如果出错，则抛出 MethodArgumentNotValidException 异常</span></span><br><span class="line"><span class="hljs-comment"> *</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> ex</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> headers</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> status</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> request</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-meta">@ExceptionHandler</span>(&#123; MethodArgumentNotValidException.class &#125;)</span><br><span class="line"><span class="hljs-meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">protected</span> Object <span class="hljs-title">handleMethodArgumentNotValidException</span><span class="hljs-params">(MethodArgumentNotValidException e)</span> </span>&#123;</span><br><span class="line">	List&lt;Map&lt;String, String&gt;&gt; errors = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	<span class="hljs-keyword">for</span> (ObjectError objectError : e.getBindingResult().getAllErrors()) &#123;</span><br><span class="line">		Map&lt;String, String&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		<span class="hljs-keyword">if</span> (objectError <span class="hljs-keyword">instanceof</span> FieldError) &#123;</span><br><span class="line">			FieldError fieldError = (FieldError) objectError;</span><br><span class="line">			map.put(<span class="hljs-string">"field"</span>, fieldError.getField());</span><br><span class="line">			map.put(<span class="hljs-string">"message"</span>, fieldError.getDefaultMessage());</span><br><span class="line">		&#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">			map.put(<span class="hljs-string">"field"</span>, objectError.getObjectName());</span><br><span class="line">			map.put(<span class="hljs-string">"message"</span>, objectError.getDefaultMessage());</span><br><span class="line">		&#125;</span><br><span class="line">		errors.add(map);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.validationException(errors);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">/**</span></span><br><span class="line"><span class="hljs-comment"> * 普通参数(非 java bean)校验出错时抛出 ConstraintViolationException 异常</span></span><br><span class="line"><span class="hljs-comment"> *</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@param</span> e</span></span><br><span class="line"><span class="hljs-comment"> * <span class="hljs-doctag">@return</span></span></span><br><span class="line"><span class="hljs-comment"> */</span></span><br><span class="line"><span class="hljs-meta">@ExceptionHandler</span>(&#123; ConstraintViolationException.class &#125;)</span><br><span class="line"><span class="hljs-meta">@ResponseStatus</span>(HttpStatus.OK)</span><br><span class="line"><span class="hljs-meta">@ResponseBody</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">handleConstraintViolationException</span><span class="hljs-params">(ConstraintViolationException e)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	List&lt;Map&lt;String, String&gt;&gt; errors = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	<span class="hljs-comment">// e.getMessage() 的格式为 getUser.id: id不能为空, getUser.name: name不能为空</span></span><br><span class="line">	String[] msgs = e.getMessage().split(<span class="hljs-string">", "</span>);</span><br><span class="line">	<span class="hljs-keyword">for</span> (String msg : msgs) &#123;</span><br><span class="line">		String[] fieldAndMsg = msg.split(<span class="hljs-string">": "</span>);</span><br><span class="line">		String field = fieldAndMsg[<span class="hljs-number">0</span>].split(<span class="hljs-string">"\\."</span>)[<span class="hljs-number">1</span>];</span><br><span class="line">		String message = fieldAndMsg[<span class="hljs-number">1</span>];</span><br><span class="line"></span><br><span class="line">		Map&lt;String, String&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">		map.put(<span class="hljs-string">"field"</span>, field);</span><br><span class="line">		map.put(<span class="hljs-string">"message"</span>, message);</span><br><span class="line">		errors.add(map);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.validationException(errors);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/spring/">spring</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/09/23/2020092301/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">单例模式</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/09/18/2020091801/">
+                <span class="level-item">name best practice</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<!-- <div class="card widget" id="toc"> -->
+<div class="card widget column-left is-sticky" id="toc">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Catalogue
+            </h3>
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#依赖">
+        <span class="has-mr-6">1</span>
+        <span>依赖</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#spring-boot">
+        <span class="has-mr-6">1.1</span>
+        <span>spring boot</span>
+        </a></li><li>
+        <a class="is-flex" href="#spring-mvc">
+        <span class="has-mr-6">1.2</span>
+        <span>spring mvc</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#JSR303-JSR-349-hibernate-validation-spring-validation-注解">
+        <span class="has-mr-6">2</span>
+        <span>JSR303/JSR-349 hibernate validation spring validation 注解</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#jsr-注解">
+        <span class="has-mr-6">2.1</span>
+        <span>jsr 注解</span>
+        </a></li><li>
+        <a class="is-flex" href="#hibernate-validation-注解">
+        <span class="has-mr-6">2.2</span>
+        <span>hibernate validation 注解</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#test">
+        <span class="has-mr-6">3</span>
+        <span>test</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#分组校验">
+        <span class="has-mr-6">3.1</span>
+        <span>分组校验</span>
+        </a></li><li>
+        <a class="is-flex" href="#自定义注解">
+        <span class="has-mr-6">3.2</span>
+        <span>自定义注解</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#接口参数验证">
+        <span class="has-mr-6">4</span>
+        <span>接口参数验证</span>
+        </a></li><li>
+        <a class="is-flex" href="#验证异常处理">
+        <span class="has-mr-6">5</span>
+        <span>验证异常处理</span>
+        </a></li></ul>
+        </div>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <!-- <a class="footer-logo is-block has-mb-6" href="/"> -->
+                <!-- 
+                    <img src="/images/dog.png" alt="spring validation" height="28">
+                 -->
+                <!-- </a> -->
+                <p class="is-size-7">
+                &copy; 2020 John Doe&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</!-->
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
