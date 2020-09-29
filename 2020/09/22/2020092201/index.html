@@ -19,7 +19,7 @@
 <meta property="og:description" content="-">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-09-23T03:36:28.000Z">
+<meta property="og:updated_time" content="2020-09-29T09:39:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring validation">
 <meta name="twitter:description" content="-">
@@ -163,7 +163,7 @@
                     <!-- <time class="level-item has-text-grey" datetime="2020-09-22T10:50:55.000Z">2020-09-22</time> -->
                     <time class="level-item has-text-grey" datetime="2020-09-22T10:50:55.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-09-22</time>
                     
-                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-09-23T03:36:28.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-09-23</time>
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-09-29T09:39:33.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-09-29</time>
                     
                         
                 <div class="level-item">
@@ -174,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    7 minutes read (About 1033 words)
+                    7 minutes read (About 1052 words)
                 </span>
                 
                 
@@ -304,6 +304,7 @@
 <li>将请求体解析并绑定到 java bean</li>
 <li>普通参数(非 java bean)校验</li>
 </ul>
+<p><code>A Spring beans&#39;s method parameters will not be validated if you don&#39;t annotated the bean with @Validated.</code></p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/hello1"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">hello</span><span class="hljs-params">(@Validated UserRequest user)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">	System.out.println(<span class="hljs-string">"test"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">"/hello2"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> RestResponse&lt;UserRequest&gt; <span class="hljs-title">hello2</span><span class="hljs-params">(@RequestBody @Validated(&#123; UpdateGroup.class &#125;)</span> UserRequest user) </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> RestResponse.ok(user);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">"/hello3"</span>)</span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">hello3</span><span class="hljs-params">(@NotBlank String username, @NotBlank String password)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> username;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <hr>
