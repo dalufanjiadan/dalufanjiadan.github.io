@@ -19,7 +19,7 @@
 <meta property="og:description" content="-">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2020-09-26T11:59:07.000Z">
+<meta property="og:updated_time" content="2020-10-06T05:55:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flutter cheat sheet">
 <meta name="twitter:description" content="-">
@@ -163,6 +163,8 @@
                     <!-- <time class="level-item has-text-grey" datetime="2020-09-26T15:05:18.000Z">2020-09-26</time> -->
                     <time class="level-item has-text-grey" datetime="2020-09-26T15:05:18.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-09-26</time>
                     
+                    <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-10-06T05:55:12.000Z"><i class="far fa-calendar-check">&nbsp;</i>2020-10-06</time>
+                    
                         
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/flutter/">flutter</a>
@@ -172,7 +174,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 105 words)
+                    a minute read (About 132 words)
                 </span>
                 
                 
@@ -197,7 +199,7 @@
 <h4 id="Border-radius"><a href="#Border-radius" class="headerlink" title="Border radius"></a>Border radius</h4><p><img src="https://i.stack.imgur.com/gERsf.png" alt="alt"></p>
 <figure class="highlight dart hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BoxDecoration myBoxDecoration() &#123;</span><br><span class="line">  <span class="hljs-keyword">return</span> BoxDecoration(</span><br><span class="line">    border: Border.all(</span><br><span class="line">      width: <span class="hljs-number">3.0</span></span><br><span class="line">    ),</span><br><span class="line">    borderRadius: BorderRadius.all(</span><br><span class="line">        Radius.circular(<span class="hljs-number">5.0</span>) <span class="hljs-comment">//                 &lt;--- border radius here</span></span><br><span class="line">    ),</span><br><span class="line">  );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<figure class="highlight dart hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">children: menu.gameMenuData[index].children</span><br><span class="line">              .map((e) =&gt; Text(e.title,))</span><br><span class="line">              .toList(),</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Text(<span class="hljs-string">"Burger"</span>.toUpperCase(),</span><br><span class="line">              style: Theme.of(context).textTheme.headline1.copyWith(</span><br><span class="line">                    color: kTextcolor,</span><br><span class="line">                    fontWeight: FontWeight.bold,</span><br><span class="line">                  )),</span><br></pre></td></tr></table></figure>
         </div>
         
         <hr style="height:1px;margin:1rem 0"/>
